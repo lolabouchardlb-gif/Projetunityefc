@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 9eab85fdec0197d45aac153135612a5f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5779868583386797751
+    second: Grid-Mask_0
+  - first:
+      213: 5568822481476054293
+    second: Grid-Mask_1
+  - first:
+      213: 469431151085397465
+    second: Grid-Mask_2
+  - first:
+      213: 1642544685825121885
+    second: Grid-Mask_3
+  - first:
+      213: 5164845540672238066
+    second: Grid-Mask_4
+  - first:
+      213: 3325178516083427694
+    second: Grid-Mask_5
+  - first:
+      213: -8965164683416319824
+    second: Grid-Mask_6
+  - first:
+      213: 1660478962074869163
+    second: Grid-Mask_7
+  - first:
+      213: 3653716006115333216
+    second: Grid-Mask_8
+  - first:
+      213: 652824944453383740
+    second: Grid-Mask_9
+  - first:
+      213: 6535646702181900188
+    second: Grid-Mask_10
+  - first:
+      213: 1457635223603503436
+    second: Grid-Mask_11
+  - first:
+      213: -8296015814799158501
+    second: Grid-Mask_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Grid-Mask_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 956
+        width: 277
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6d5318ad7363050800000000000000
+      internalID: 5779868583386797751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 268
+        width: 277
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51de691ca8e684d40800000000000000
+      internalID: 5568822481476054293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_2
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 956
+        width: 278
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5a2fe0521c38600800000000000000
+      internalID: 469431151085397465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_3
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 268
+        width: 278
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5edf4e60bd7bc610800000000000000
+      internalID: 1642544685825121885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_4
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 956
+        width: 278
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1778b97a73da740800000000000000
+      internalID: 5164845540672238066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_5
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 816
+        width: 278
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69c9e92e38652e20800000000000000
+      internalID: 3325178516083427694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_6
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 816
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b8c71c4836559380800000000000000
+      internalID: -8965164683416319824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 277
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad5b7381d43b0710800000000000000
+      internalID: 1660478962074869163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_8
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 278
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064d9ae695b94b230800000000000000
+      internalID: 3653716006115333216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_9
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 268
+        width: 141
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3678a204dc4f0900800000000000000
+      internalID: 652824944453383740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_10
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 0
+        width: 278
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f510d5c0843ba50800000000000000
+      internalID: 6535646702181900188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_11
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 268
+        width: 129
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41ebf2538f8a3410800000000000000
+      internalID: 1457635223603503436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grid-Mask_12
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 128
+        width: 129
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b139fd31291aedc80800000000000000
+      internalID: -8296015814799158501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Grid-Mask_0: 5779868583386797751
+      Grid-Mask_1: 5568822481476054293
+      Grid-Mask_10: 6535646702181900188
+      Grid-Mask_11: 1457635223603503436
+      Grid-Mask_12: -8296015814799158501
+      Grid-Mask_2: 469431151085397465
+      Grid-Mask_3: 1642544685825121885
+      Grid-Mask_4: 5164845540672238066
+      Grid-Mask_5: 3325178516083427694
+      Grid-Mask_6: -8965164683416319824
+      Grid-Mask_7: 1660478962074869163
+      Grid-Mask_8: 3653716006115333216
+      Grid-Mask_9: 652824944453383740
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

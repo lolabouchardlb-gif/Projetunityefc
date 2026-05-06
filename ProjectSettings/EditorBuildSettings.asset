@@ -6,7 +6,92 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 36e047ba11d8e174c8d7bbea553be680
+  - enabled: 1
+    path: Assets/Scenes/ChoixMinijeuMigmaq.unity
+    guid: d2f5cda3562572a44b84b7d967c0a22f
+  - enabled: 1
+    path: Assets/Scenes/miniJeuDragAndDropMigmaq.unity
+    guid: 8e101a5a4e764d446a0ee9e5e540d7e9
+  - enabled: 1
+    path: Assets/Scenes/ExplicationMigmaq.unity
+    guid: 43f395c2760785341a82efd52d8afc39
+  - enabled: 1
+    path: Assets/Scenes/miniJeuQuizzMigmaq.unity
+    guid: fd875e9e12de9e14a9b7e1334cc9cfd1
+  - enabled: 1
+    path: Assets/Scenes/miniJeuRelierMigmaq.unity
+    guid: 17d17faf32864634190bf3f4b8b7ce43
+  - enabled: 1
+    path: Assets/Scenes/ChoixMinijeuCris.unity
+    guid: 1143ff72dc8022346ac8f4734bfab127
+  - enabled: 1
+    path: Assets/Scenes/ChoixMinijeuInnus.unity
+    guid: 3aa4f2d59a648ff44a31cb03450c37a7
+  - enabled: 1
+    path: Assets/Scenes/ChoixMinijeuMalecite.unity
+    guid: 842490be76deadf4ba263c39d167d4e8
+  - enabled: 1
+    path: Assets/Scenes/IntroCris.unity
+    guid: 071b52f0c73b1a14084d32d35c3164aa
+  - enabled: 1
+    path: Assets/Scenes/ExplicationInnus.unity
+    guid: dc56cb32959ead24490fbdaf414abc77
+  - enabled: 1
+    path: Assets/Scenes/ExplicationMalecite.unity
+    guid: bb7ed9dd82b48fa45a14bc657fdfb7f1
+  - enabled: 1
+    path: Assets/Scenes/miniJeuDragAndDropCris.unity
+    guid: 9f5e4dece4a777147a69d5184ed71989
+  - enabled: 1
+    path: Assets/Scenes/miniJeuDragAndDropInnus.unity
+    guid: 3bf2e3e1d7b41a541bca66665c403f14
+  - enabled: 1
+    path: Assets/Scenes/miniJeuDragAndDropMalecite.unity
+    guid: 16f18fb035590a842af4c15ffd249197
+  - enabled: 1
+    path: Assets/Scenes/miniJeuQuizzCris.unity
+    guid: aca30a98474d0a34a9055c6d75ad1fbe
+  - enabled: 1
+    path: Assets/Scenes/miniJeuQuizzInnus.unity
+    guid: 310708df5eb11ae43adacd574dae7952
+  - enabled: 1
+    path: Assets/Scenes/miniJeuQuizzMalecite.unity
+    guid: 3d9c64d6abe36e24c90f85f59344982f
+  - enabled: 1
+    path: Assets/Scenes/miniJeuRelierCris.unity
+    guid: cb2341e07641f7941b776472b4e52737
+  - enabled: 1
+    path: Assets/Scenes/miniJeuRelierInnus.unity
+    guid: 8ae18724aac21094780255f8242bd477
+  - enabled: 1
+    path: Assets/Scenes/miniJeuRelierMalecite.unity
+    guid: a60f94ef5ea1f6d41a9b5ac237aa29bc
+  - enabled: 1
+    path: Assets/Scenes/ChoixExplicationCris.unity
+    guid: ae67199c9711cf24abfde0650f2a7d7e
+  - enabled: 1
+    path: Assets/Scenes/ExplicationPartie2Cris.unity
+    guid: 56d86608257f90f449114f803617daa6
+  - enabled: 1
+    path: Assets/Scenes/ExplicationPartie1Cris.unity
+    guid: 7bcdc675f840acd41b5948162066b533
+  - enabled: 1
+    path: Assets/Scenes/ExplicationConclusionCris.unity
+    guid: 5ef53946b799c9d41a12bef9e83489c9
+  - enabled: 1
+    path: Assets/Scenes/ChoixExplicationInnus.unity
+    guid: 18daa29c5055ef849ade5f37a54d4e28
+  - enabled: 1
+    path: Assets/Scenes/IntroInnus.unity
+    guid: ec04b2ba7b71e7b42ac1799b9cdc85e6
+  - enabled: 1
+    path: Assets/Scenes/MapScene.unity
+    guid: 16a76dec23c39e14bb91d24e8abddb45
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_UseUCBPForAssetBundles: 0
