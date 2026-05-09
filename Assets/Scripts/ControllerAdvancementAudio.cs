@@ -21,6 +21,16 @@ public class ControllerAdvancementAudio : MonoBehaviour
     [TextArea(5, 10)]
     [SerializeField] private string _fullText;
 
+    [Header("Video affichage mot")]
+    [SerializeField] private VideoPlayer _videoWordPlayer;
+
+    [Header("Video Timeline ")]
+    [SerializeField] private float[] videoStartTimes;
+    [SerializeField] private float[] videoEndTimes;
+    [SerializeField] private VideoClip[] videoClips;
+
+    private int currentVideoIndex = -1;
+
     // nombre total de caractères du texte
     private int _totalCharacters;
 
@@ -41,6 +51,12 @@ public class ControllerAdvancementAudio : MonoBehaviour
 
         // on remet tout à zéro au niveau de l'ui au départ
         ResetUI();
+
+        if (_videoWordPlayer != null) 
+        {
+            _videoWordPlayer.loopPointReached += OnEventVideoFinished;
+        }
+            
     }
 
 
@@ -63,7 +79,64 @@ public class ControllerAdvancementAudio : MonoBehaviour
 
         // on vérifie si l’audio est terminé
         CheckFinish();
+
+        UpdateVideoEvents(_time);
     }
+
+    void UpdateVideoEvents(float time)
+    {
+        for (int i = 0; i < videoClips.Length; i++)
+        {
+            if (time >= videoStartTimes[i] && time < videoEndTimes[i])
+            {
+                if (currentVideoIndex != i)
+                {
+                    PlayEventVideo(i);
+                }
+                return;
+            }
+        }
+
+        HideEventVideo();
+    }
+
+    void PlayEventVideo(int index)
+    {
+        // si déjà la bonne vidéo → ne rien faire
+        if (currentVideoIndex == index && _videoWordPlayer.isPlaying) 
+        {
+            return;
+        }
+            
+
+        currentVideoIndex = index;
+
+        _videoWordPlayer.Stop(); 
+
+        _videoWordPlayer.clip = videoClips[index];
+        _videoWordPlayer.gameObject.SetActive(true);
+        _videoWordPlayer.time = 0;
+
+        _videoWordPlayer.Play();
+    }
+
+    void HideEventVideo()
+    {
+        if (currentVideoIndex == -1) 
+        {
+            return;
+        } 
+
+        _videoWordPlayer.Stop();
+        _videoWordPlayer.gameObject.SetActive(false);
+        currentVideoIndex = -1;
+    }
+
+    void OnEventVideoFinished(VideoPlayer vp)
+    {
+        HideEventVideo();
+    }
+
 
 
     //bouton principal qui permet de mettre play / pause / restart quand on clique dessus
@@ -103,8 +176,11 @@ public class ControllerAdvancementAudio : MonoBehaviour
         _audioSource.Play();
 
         // si la vidéo existe alors on la lance
-        if (_videoPlayer != null)
-            _videoPlayer.Play(); 
+        if (_videoPlayer != null) 
+        {
+            _videoPlayer.Play();
+        }
+             
     }
 
 
@@ -115,8 +191,11 @@ public class ControllerAdvancementAudio : MonoBehaviour
         _audioSource.Pause();
 
         // si la vidéo existe alors on la met en pause
-        if (_videoPlayer != null)
+        if (_videoPlayer != null) 
+        {
             _videoPlayer.Pause(); 
+        }
+            
     }
 
 
@@ -127,11 +206,7 @@ public class ControllerAdvancementAudio : MonoBehaviour
         float _progress = Mathf.Clamp01(_time / _audioClip.length);
 
         // nombre de caractères à afficher selon progression
-        int _charCount = Mathf.Clamp(
-            Mathf.RoundToInt(_progress * _totalCharacters),
-            0,
-            _totalCharacters
-        );
+        int _charCount = Mathf.Clamp(Mathf.RoundToInt(_progress * _totalCharacters), 0, _totalCharacters);
 
         // on affiche une partie du texte
         _subtitleText.text = _fullText.Substring(0, _charCount);
@@ -148,7 +223,6 @@ public class ControllerAdvancementAudio : MonoBehaviour
         _scrollRect.verticalNormalizedPosition = 0f; 
     }
 
-
     //fonction pour vérifier si l’audio est presque fini
     void CheckFinish()
     {
@@ -158,11 +232,14 @@ public class ControllerAdvancementAudio : MonoBehaviour
             _hasFinished = true; 
 
             //on laisse le texte affiché
-            _subtitleText.text = _fullText; 
+            _subtitleText.text = _fullText;
 
             //si la vidéo existe on la met en pause
-            if (_videoPlayer != null)
+            if (_videoPlayer != null) 
+            {
                 _videoPlayer.Pause();
+            }
+                
         }
     }
 

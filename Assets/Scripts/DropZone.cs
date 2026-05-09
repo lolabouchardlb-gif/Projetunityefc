@@ -17,6 +17,7 @@ public class DropZone : MonoBehaviour
         //si il a ule script on enregistre l'object dans la drop zone
         if (obj != null)
         {
+            Debug.Log("Entré : " + obj.name);
             _currentObject = obj;
         }
     }
@@ -30,6 +31,7 @@ public class DropZone : MonoBehaviour
         //on le supprime de la zone
         if (obj != null && obj == _currentObject)
         {
+            Debug.Log("Sorti : " + obj.name);
             _currentObject = null;
         }
     }

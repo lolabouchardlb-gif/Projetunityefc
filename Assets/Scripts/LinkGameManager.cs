@@ -8,12 +8,10 @@ public class LinkGameManager : MonoBehaviour
     public int totalConnectionsNeeded;
 
     [Header("UI")]
-    public GameObject startPanel;
-    public GameObject background;
-
     public GameObject validateButton;
     public GameObject retryButton;
     public GameObject ReturnMiniGameChoiseButton;
+    public GameObject BackgroundTxtResult;
 
     public TMP_Text resultText;
 
@@ -22,40 +20,28 @@ public class LinkGameManager : MonoBehaviour
 
     void Start()
     {
-        //On dit que le jeu n'a pas commencer
-        SetGameState(false);
-        //on cache tous le UI
+        //On dit que le jeu a commencé
+        gameStarted = true;
+        //on cache tous les UI
         validateButton.SetActive(false);
         retryButton.SetActive(false);
         ReturnMiniGameChoiseButton.SetActive(false);
         resultText.gameObject.SetActive(false);
+        BackgroundTxtResult.SetActive(false);
     }
 
     void Update()
     {
-        if (!gameStarted) return;
+        if (!gameStarted) 
+        {
+            return;
+        } 
 
         //on verifie si toutes les connections on été faite
         bool allConnected = lineManager.AllConnected(totalConnectionsNeeded);
 
         //si elles ont toute été faite on affiche le bouton pour vérifier
         validateButton.SetActive(allConnected);
-    }
-
-    //on lance le jeu
-    public void StartGame()
-    {
-        gameStarted = true;
-        SetGameState(true);
-    }
-
-    //gère l’affichage du début
-    void SetGameState(bool state)
-    {
-        //si state = true alors on cache le menu
-        startPanel.SetActive(!state);
-        //si state = false alors on affiche le menu
-        background.SetActive(!state);
     }
 
     // Fonction appelée quand on clique sur le bouton “Vérifier”
@@ -66,6 +52,7 @@ public class LinkGameManager : MonoBehaviour
         lineManager.GetResults(out correct, out wrong);
 
         //affichage du texte
+        BackgroundTxtResult.SetActive(true);
         resultText.gameObject.SetActive(true);
         resultText.text = "Liaison correct : " + correct + " | Lisaisons fausse : " + wrong;
 
@@ -93,6 +80,7 @@ public class LinkGameManager : MonoBehaviour
     // afficher le ui pour corriger
     public void Retry()
     {
+        BackgroundTxtResult.SetActive(false);
         resultText.gameObject.SetActive(false);
 
         retryButton.SetActive(false);

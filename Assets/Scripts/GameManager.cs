@@ -8,33 +8,28 @@ public class GameManager : MonoBehaviour
     public TMP_Text resultText;
     public GameObject ReturnMiniGameChoise;
     public GameObject retryButton;
+    public GameObject BackgroundText;
 
-    public GameObject startPanel;
-    public GameObject background;
     public DragAndDrop[] draggableObjects;
-
-    // Indique si le jeu a commencé
-    private bool gameStarted = false;
 
     // Indique si on peut afficher le bouton valider
     private bool canValidate = false;
 
     void Start()
     {
-        // On désactive la phase de jeu au départ
-        SetGameState(false);
+        // On active la phase de jeu au départ
+        SetGameState(true);
 
         // On cache tous les éléments UI du jeu
         validateButton.SetActive(false);
         resultText.gameObject.SetActive(false);
         ReturnMiniGameChoise.SetActive(false);
         retryButton.SetActive(false);
+        BackgroundText.SetActive(false);
     }
 
     void Update()
     {
-        // Si le jeu n'a pas commencé alors on ne fait rien
-        if (!gameStarted) return;
 
         //on suppose que tout est rempli
         bool allFilled = true;
@@ -71,14 +66,20 @@ public class GameManager : MonoBehaviour
         foreach (DropZone zone in dropZones)
         {
             // si bonne réponse
-            if (zone.IsCorrect())
+            if (zone.IsCorrect()) 
+            {
                 correct++;
+            }  
             //si mauvaise réponse
-            else
+            else 
+            {
                 wrong++;
+            }
+                
         }
 
         // On affiche le résultat
+        BackgroundText.SetActive(true);
         resultText.gameObject.SetActive(true);
         resultText.text = "Correct : " + correct + " | Faux : " + wrong;
 
@@ -106,18 +107,12 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        // Le jeu commence
-        gameStarted = true;
         // On active la phase de jeu
         SetGameState(true);
     }
 
     void SetGameState(bool state)
     {
-        // UI de départ cachée et fond caché selon l'état
-        startPanel.SetActive(!state);
-        background.SetActive(!state);
-
         // Activation / désactivation du drag & drop selon l'état du jeu
         foreach (DragAndDrop obj in draggableObjects)
         {
@@ -131,6 +126,7 @@ public class GameManager : MonoBehaviour
         resultText.gameObject.SetActive(false);
         ReturnMiniGameChoise.SetActive(false);
         retryButton.SetActive(false);
+        BackgroundText.SetActive(false);
 
         // On réactive les objets drag & drop
         foreach (DragAndDrop obj in draggableObjects)

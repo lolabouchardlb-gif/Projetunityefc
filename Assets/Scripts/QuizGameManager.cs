@@ -12,8 +12,6 @@ public class QuizGameManager : MonoBehaviour
     public TMP_Text questionText;
     public TMP_Text progressText;
     public TMP_Text feedbackText;
-    public GameObject startPanel;
-    public GameObject background;
 
     public Button[] answerButtons;
     public GameObject validateButton;
@@ -29,19 +27,18 @@ public class QuizGameManager : MonoBehaviour
 
     private void Start()
     {
-        SetGameState(false);
+        SetGameState(true);
 
         validateButton.SetActive(false);
         nextButton.SetActive(false);
         feedbackText.gameObject.SetActive(false);
         returnMiniGameChoiseButton.SetActive(false);
+
+        DisplayQuestion();
     }
 
     private void SetGameState(bool state)
     {
-        // UI de départ
-        startPanel.SetActive(!state);
-        background.SetActive(!state);
 
         // UI du quiz
         questionText.gameObject.SetActive(state);
