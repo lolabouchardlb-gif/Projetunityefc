@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CommandAudio
   _audioSource: {fileID: 1951227149}
-  _audioClip: {fileID: 8300000, guid: 48b2613df9b23f24c99a1f9cacaf71bd, type: 3}
+  _audioClip: {fileID: 8300000, guid: b47e3c55a0246e44c8ae38e0678ca81c, type: 3}
   _videoPlayer: {fileID: 968717868}
   _playButton: {fileID: 1368031389}
   _pauseButton: {fileID: 1115614556}
@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INNUS
+  m_text: CRIS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c88eb7cb05d7ac4439de48d0651450c3, type: 2}
   m_sharedMaterial: {fileID: -989454911570715982, guid: c88eb7cb05d7ac4439de48d0651450c3, type: 2}
@@ -2058,7 +2058,7 @@ PrefabInstance:
     - target: {fileID: 3293410817923490109, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 48b2613df9b23f24c99a1f9cacaf71bd, type: 3}
+      objectReference: {fileID: 8300000, guid: b47e3c55a0246e44c8ae38e0678ca81c, type: 3}
     - target: {fileID: 3809036991181196640, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2171,22 +2171,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: _fullText
-      value: "Les Innus sont un peuple autochtone de l\u2019Est du Canada, principalement
-        pr\xE9sents sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
-        ancestral est appel\xE9 Nitassinan, ce qui signifie \xAB notre terre \xBB.
-        Ce territoire est tr\xE8s vaste et comprend des for\xEAts, des rivi\xE8res,
-        des montagnes et des zones c\xF4ti\xE8res. Les Innus font partie de la famille
-        des peuples algonquiens.\LLes Innus vivent sur ce territoire depuis des milliers
-        d\u2019ann\xE9es. Avant l\u2019arriv\xE9e des Europ\xE9ens, leur mode de
-        vie \xE9tait nomade. Ils se d\xE9pla\xE7aient en fonction des saisons pour
-        chasser, p\xEAcher et se nourrir. La chasse au caribou occupait une place
-        centrale dans leur mode de vie, car cet animal fournissait de la nourriture,
-        des v\xEAtements et des mat\xE9riaux pour fabriquer des outils."
+      value: "Dans leur culture, les animaux ne sont pas seulement vus comme des
+        ressources. Ils ont aussi une importance symbolique. Par exemple, le mot
+        aahchikw d\xE9signe le phoque, un animal pr\xE9sent dans certaines r\xE9gions
+        nordiques.\LLes conditions climatiques occupent une place importante dans
+        la vie des Cris, surtout \xE0 cause des hivers longs et rigoureux. Ils poss\xE8dent
+        un grand nombre de mots pour d\xE9crire la neige et les sensations li\xE9es
+        au froid. Par exemple, le mot tihchisiu signifie \xAB il ou elle est froid
+        au toucher \xBB. Cela montre \xE0 quel point la langue est li\xE9e \xE0 l\u2019environnement.\LCes
+        mots sont utilis\xE9s dans le parler cri de l\u2019Est du nord, notamment
+        dans des communaut\xE9s comme Chisasibi, qui fait partie des communaut\xE9s
+        cries situ\xE9es au nord du territoire."
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: _audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 48b2613df9b23f24c99a1f9cacaf71bd, type: 3}
+      objectReference: {fileID: 8300000, guid: b47e3c55a0246e44c8ae38e0678ca81c, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: _ScrollRect
       value: 
@@ -2243,35 +2243,35 @@ PrefabInstance:
       objectReference: {fileID: 1378141394}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: videoClips.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoClips.Array.data[0]'
       value: 
-      objectReference: {fileID: 32900000, guid: 05853676f6d5011498e4e6e7c54865f0, type: 3}
+      objectReference: {fileID: 32900000, guid: 2c66435c803fc3242acb221b61dd76b5, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoClips.Array.data[1]'
       value: 
-      objectReference: {fileID: 32900000, guid: 35c370f8fb7a8494c804231c93f67624, type: 3}
+      objectReference: {fileID: 32900000, guid: 28f5e3078f021f946824a04a0f16a9d7, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoClips.Array.data[2]'
       value: 
       objectReference: {fileID: 32900000, guid: 47646f41e83ce5f4ba0f8243e8d0264b, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: videoEndTimes.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: videoStartTimes.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoEndTimes.Array.data[0]'
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoEndTimes.Array.data[1]'
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoEndTimes.Array.data[2]'
@@ -2279,11 +2279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoStartTimes.Array.data[0]'
-      value: 9.5
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoStartTimes.Array.data[1]'
-      value: 20.5
+      value: 26.5
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoStartTimes.Array.data[2]'

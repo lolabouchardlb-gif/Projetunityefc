@@ -23,6 +23,7 @@ public class ControllerAdvancementAudio : MonoBehaviour
 
     [Header("Video affichage mot")]
     [SerializeField] private VideoPlayer _videoWordPlayer;
+    [SerializeField] private GameObject _videoWordDisplay;
 
     [Header("Video Timeline ")]
     [SerializeField] private float[] videoStartTimes;
@@ -56,7 +57,10 @@ public class ControllerAdvancementAudio : MonoBehaviour
         {
             _videoWordPlayer.loopPointReached += OnEventVideoFinished;
         }
-            
+
+        _videoWordDisplay.SetActive(false);
+
+
     }
 
 
@@ -115,6 +119,7 @@ public class ControllerAdvancementAudio : MonoBehaviour
 
         _videoWordPlayer.clip = videoClips[index];
         _videoWordPlayer.gameObject.SetActive(true);
+        _videoWordDisplay.SetActive(true);
         _videoWordPlayer.time = 0;
 
         _videoWordPlayer.Play();
@@ -129,6 +134,7 @@ public class ControllerAdvancementAudio : MonoBehaviour
 
         _videoWordPlayer.Stop();
         _videoWordPlayer.gameObject.SetActive(false);
+        _videoWordDisplay.SetActive(false);
         currentVideoIndex = -1;
     }
 

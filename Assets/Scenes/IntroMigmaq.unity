@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CommandAudio
   _audioSource: {fileID: 1951227149}
-  _audioClip: {fileID: 8300000, guid: 48b2613df9b23f24c99a1f9cacaf71bd, type: 3}
+  _audioClip: {fileID: 8300000, guid: 62391f9918ca4954cad510a45b0ce9e1, type: 3}
   _videoPlayer: {fileID: 968717868}
   _playButton: {fileID: 1368031389}
   _pauseButton: {fileID: 1115614556}
@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INNUS
+  m_text: MIGMAQ
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c88eb7cb05d7ac4439de48d0651450c3, type: 2}
   m_sharedMaterial: {fileID: -989454911570715982, guid: c88eb7cb05d7ac4439de48d0651450c3, type: 2}
@@ -2058,7 +2058,7 @@ PrefabInstance:
     - target: {fileID: 3293410817923490109, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 48b2613df9b23f24c99a1f9cacaf71bd, type: 3}
+      objectReference: {fileID: 8300000, guid: 62391f9918ca4954cad510a45b0ce9e1, type: 3}
     - target: {fileID: 3809036991181196640, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2171,22 +2171,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: _fullText
-      value: "Les Innus sont un peuple autochtone de l\u2019Est du Canada, principalement
-        pr\xE9sents sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
-        ancestral est appel\xE9 Nitassinan, ce qui signifie \xAB notre terre \xBB.
-        Ce territoire est tr\xE8s vaste et comprend des for\xEAts, des rivi\xE8res,
-        des montagnes et des zones c\xF4ti\xE8res. Les Innus font partie de la famille
-        des peuples algonquiens.\LLes Innus vivent sur ce territoire depuis des milliers
-        d\u2019ann\xE9es. Avant l\u2019arriv\xE9e des Europ\xE9ens, leur mode de
-        vie \xE9tait nomade. Ils se d\xE9pla\xE7aient en fonction des saisons pour
-        chasser, p\xEAcher et se nourrir. La chasse au caribou occupait une place
-        centrale dans leur mode de vie, car cet animal fournissait de la nourriture,
-        des v\xEAtements et des mat\xE9riaux pour fabriquer des outils."
+      value: "Les Mi\u2019gmaq sont un peuple autochtone de l\u2019Est du Canada.
+        Leur territoire ancestral s\u2019appelle Mi\u2019kma\u2019ki et comprend
+        principalement les provinces maritimes, comme la Nouvelle-\xC9cosse, le Nouveau-Brunswick
+        et l\u2019\xCEle-du-Prince-\xC9douard, ainsi qu\u2019une partie du Qu\xE9bec,
+        notamment la Gasp\xE9sie. Ce territoire couvre plusieurs centaines de milliers
+        de kilom\xE8tres carr\xE9s. Ils font partie de la famille des peuples algonquiens.\LLes
+        Mi\u2019gmaq vivent sur ce territoire depuis des milliers d\u2019ann\xE9es,
+        avec une pr\xE9sence estim\xE9e \xE0 plus de 10 000 ans. Leur mode de vie
+        traditionnel \xE9tait nomade et d\xE9pendait des saisons. Ils se d\xE9pla\xE7aient
+        pour chasser, p\xEAcher et se nourrir. Le territoire \xE9tait essentiel \xE0
+        leur survie et \xE0 leur organisation.\LLes Mi\u2019gmaq faisaient partie
+        de la Conf\xE9d\xE9ration Wabanaki, une alliance avec d\u2019autres nations
+        comme les Wolastoqiyik, les Ab\xE9naquis et les Cris. Cette alliance regroupait
+        plusieurs peuples de l\u2019Est et permettait de maintenir des relations,
+        d\u2019\xE9changer et de se soutenir."
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: _audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 48b2613df9b23f24c99a1f9cacaf71bd, type: 3}
+      objectReference: {fileID: 8300000, guid: 62391f9918ca4954cad510a45b0ce9e1, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: _ScrollRect
       value: 
@@ -2243,51 +2247,63 @@ PrefabInstance:
       objectReference: {fileID: 1378141394}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: videoClips.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoClips.Array.data[0]'
       value: 
-      objectReference: {fileID: 32900000, guid: 05853676f6d5011498e4e6e7c54865f0, type: 3}
+      objectReference: {fileID: 32900000, guid: 24f98ac45002b804ea69c728e221b2d6, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoClips.Array.data[1]'
       value: 
-      objectReference: {fileID: 32900000, guid: 35c370f8fb7a8494c804231c93f67624, type: 3}
+      objectReference: {fileID: 32900000, guid: c3479570f0dd33b4d9e47f33800bf41b, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoClips.Array.data[2]'
       value: 
-      objectReference: {fileID: 32900000, guid: 47646f41e83ce5f4ba0f8243e8d0264b, type: 3}
+      objectReference: {fileID: 32900000, guid: e3c4deb4070a78a408b3a2eb1522f763, type: 3}
+    - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
+      propertyPath: 'videoClips.Array.data[3]'
+      value: 
+      objectReference: {fileID: 32900000, guid: b875c3e8087e85743bbd0af293eec8fc, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: videoEndTimes.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: videoStartTimes.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoEndTimes.Array.data[0]'
-      value: 14
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoEndTimes.Array.data[1]'
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoEndTimes.Array.data[2]'
-      value: 38
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
+      propertyPath: 'videoEndTimes.Array.data[3]'
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoStartTimes.Array.data[0]'
-      value: 9.5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoStartTimes.Array.data[1]'
-      value: 20.5
+      value: 21.5
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoStartTimes.Array.data[2]'
-      value: 33.5
+      value: 28.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
+      propertyPath: 'videoStartTimes.Array.data[3]'
+      value: 43.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

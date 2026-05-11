@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CommandAudio
   _audioSource: {fileID: 1951227149}
-  _audioClip: {fileID: 8300000, guid: 48b2613df9b23f24c99a1f9cacaf71bd, type: 3}
+  _audioClip: {fileID: 8300000, guid: f27fcb5ce7285ae4ea90f1335d9c5c4b, type: 3}
   _videoPlayer: {fileID: 968717868}
   _playButton: {fileID: 1368031389}
   _pauseButton: {fileID: 1115614556}
@@ -2058,7 +2058,7 @@ PrefabInstance:
     - target: {fileID: 3293410817923490109, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 48b2613df9b23f24c99a1f9cacaf71bd, type: 3}
+      objectReference: {fileID: 8300000, guid: f27fcb5ce7285ae4ea90f1335d9c5c4b, type: 3}
     - target: {fileID: 3809036991181196640, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2171,22 +2171,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: _fullText
-      value: "Les Innus sont un peuple autochtone de l\u2019Est du Canada, principalement
-        pr\xE9sents sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
-        ancestral est appel\xE9 Nitassinan, ce qui signifie \xAB notre terre \xBB.
-        Ce territoire est tr\xE8s vaste et comprend des for\xEAts, des rivi\xE8res,
-        des montagnes et des zones c\xF4ti\xE8res. Les Innus font partie de la famille
-        des peuples algonquiens.\LLes Innus vivent sur ce territoire depuis des milliers
-        d\u2019ann\xE9es. Avant l\u2019arriv\xE9e des Europ\xE9ens, leur mode de
-        vie \xE9tait nomade. Ils se d\xE9pla\xE7aient en fonction des saisons pour
-        chasser, p\xEAcher et se nourrir. La chasse au caribou occupait une place
-        centrale dans leur mode de vie, car cet animal fournissait de la nourriture,
-        des v\xEAtements et des mat\xE9riaux pour fabriquer des outils."
+      value: "Les Innus utilisaient \xE9galement les ressources naturelles pour se
+        soigner. Certaines plantes avaient des propri\xE9t\xE9s m\xE9dicinales. Par
+        exemple, le mot tshishtikatshenanu d\xE9signe une plante m\xE9dicinale, le
+        kalmia \xE0 feuilles \xE9troites. Cela montre l\u2019importance des connaissances
+        li\xE9es \xE0 la nature.\LLes animaux \xE9taient utilis\xE9s de mani\xE8re
+        compl\xE8te. Apr\xE8s la chasse, les peaux \xE9taient transform\xE9es pour
+        fabriquer des v\xEAtements. Le mot uishatshipaku d\xE9crit l\u2019action
+        d\u2019utiliser des piquets pour \xE9tirer une peau afin de la faire s\xE9cher.
+        Cette technique permettait de conserver les peaux et de les utiliser plus
+        longtemps."
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: _audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 48b2613df9b23f24c99a1f9cacaf71bd, type: 3}
+      objectReference: {fileID: 8300000, guid: f27fcb5ce7285ae4ea90f1335d9c5c4b, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: _ScrollRect
       value: 
@@ -2243,27 +2242,27 @@ PrefabInstance:
       objectReference: {fileID: 1378141394}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: videoClips.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoClips.Array.data[0]'
       value: 
-      objectReference: {fileID: 32900000, guid: 05853676f6d5011498e4e6e7c54865f0, type: 3}
+      objectReference: {fileID: 32900000, guid: d27ee0072b0ef244daee853d222363a7, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoClips.Array.data[1]'
       value: 
-      objectReference: {fileID: 32900000, guid: 35c370f8fb7a8494c804231c93f67624, type: 3}
+      objectReference: {fileID: 32900000, guid: 4db68180fddb8b045b6dbea4a3116dcb, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoClips.Array.data[2]'
       value: 
       objectReference: {fileID: 32900000, guid: 47646f41e83ce5f4ba0f8243e8d0264b, type: 3}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: videoEndTimes.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: videoStartTimes.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoEndTimes.Array.data[0]'
@@ -2271,7 +2270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoEndTimes.Array.data[1]'
-      value: 25
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoEndTimes.Array.data[2]'
@@ -2283,7 +2282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoStartTimes.Array.data[1]'
-      value: 20.5
+      value: 29.5
       objectReference: {fileID: 0}
     - target: {fileID: 7637026891449854056, guid: 38d67a25058c61440b8cb42ea38cba3f, type: 3}
       propertyPath: 'videoStartTimes.Array.data[2]'
