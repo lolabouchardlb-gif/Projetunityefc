@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-
 public class MapPanelController : MonoBehaviour
 {
     public RectTransform panel;
@@ -10,17 +9,20 @@ public class MapPanelController : MonoBehaviour
     public TMP_Text descriptionText;
     public Vector2 hiddenPos = new Vector2(420, 0);
     public Vector2 visiblePos = new Vector2(-40, 0);
-    public float duration = 8.0f;
+    public float duration = 0.4f;
     private string currentSceneName;
-    Coroutine current;
+    private Coroutine current;
     void Start()
     {
+        panel.gameObject.SetActive(true);
         panel.anchoredPosition = hiddenPos;
     }
     public void Show(string title, string desc, string sceneName)
     {
+        panel.gameObject.SetActive(true);
         currentSceneName = sceneName;
-        if (current != null) StopCoroutine(current);
+        if (current != null)
+            StopCoroutine(current);
         current = StartCoroutine(SwitchRoutine(title, desc));
     }
     public void LoadSelectedScene()
@@ -32,17 +34,14 @@ public class MapPanelController : MonoBehaviour
     }
     public void Hide()
     {
-        if (current != null) StopCoroutine(current);
+        if (current != null)
+            StopCoroutine(current);
         current = StartCoroutine(Slide(hiddenPos));
     }
     public void ShowTest()
-
     {
-
         Show("Titre test", "Description test", "NomScene");
-
     }
-
     IEnumerator SwitchRoutine(string title, string desc)
     {
         yield return Slide(hiddenPos);
@@ -59,7 +58,7 @@ public class MapPanelController : MonoBehaviour
         {
             t += Time.deltaTime;
             float p = t / duration;
-            p = Mathf.Pow(p, 3f); // easing lent
+            p = Mathf.Pow(p, 3f);
             panel.anchoredPosition = Vector2.Lerp(start, target, p);
             yield return null;
         }

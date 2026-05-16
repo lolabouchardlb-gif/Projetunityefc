@@ -2561,6 +2561,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1251109784}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5417212232452561469, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2644,6 +2676,46 @@ PrefabInstance:
     - target: {fileID: 6322617970888693246, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913002633258862659, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1251109784}
+    - target: {fileID: 6913002633258862659, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913002633258862659, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MapScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1251109784}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SceneSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: miniJeuDragAndDropCris
       objectReference: {fileID: 0}
     - target: {fileID: 7379541458732518295, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
       propertyPath: m_Interactable
