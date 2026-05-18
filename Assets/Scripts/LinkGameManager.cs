@@ -1,94 +1,128 @@
-using UnityEngine;
-using TMPro;
+using UnityEngine; 
+using TMPro; 
 
-public class LinkGameManager : MonoBehaviour
+public class LinkGameManager : MonoBehaviour 
 {
     [Header("Références")]
-    public LineManager lineManager;
-    public int totalConnectionsNeeded;
+    // Référence au LineManager (lignes et résultats).
+    [SerializeField] private LineManager _lineManager;
+    // Nombre de connexions nécessaires pour activer la validation.
+    [SerializeField] private int _totalConnectionsNeeded; 
 
     [Header("UI")]
-    public GameObject validateButton;
-    public GameObject retryButton;
-    public GameObject ReturnMiniGameChoiseButton;
-    public GameObject BackgroundTxtResult;
-
-    public TMP_Text resultText;
+    // Bouton "Vérifier/Valider".
+    [SerializeField] private GameObject _validateButton;
+    // Bouton pour se corriger.
+    [SerializeField] private GameObject _retryButton;
+    // Bouton de félicitation.
+    [SerializeField] private GameObject _returnMiniGameChoiseButton;
+    // Fond UI derrière le texte des résultats.
+    [SerializeField] private GameObject _backgroundTxtResult;
+    // Texte de résultat.
+    [SerializeField] private TMP_Text _resultText; 
 
     //permet de savoir si le jeu a commencé
-    private bool gameStarted = false;
+    private bool _gameStarted;
 
-    void Start()
+    // On initialise l'UI.
+    private void Start() 
     {
         //On dit que le jeu a commencé
-        gameStarted = true;
+        _gameStarted = true; 
         //on cache tous les UI
-        validateButton.SetActive(false);
-        retryButton.SetActive(false);
-        ReturnMiniGameChoiseButton.SetActive(false);
-        resultText.gameObject.SetActive(false);
-        BackgroundTxtResult.SetActive(false);
+        _validateButton.SetActive(false); 
+        _retryButton.SetActive(false); 
+        _returnMiniGameChoiseButton.SetActive(false); 
+        _resultText.gameObject.SetActive(false); 
+        _backgroundTxtResult.SetActive(false); 
     }
 
-    void Update()
+    // Fonction qui met à jour l'état du bouton "Valider" selon les connexions.
+    private void Update() 
     {
-        if (!gameStarted) 
+        // Si le jeu n'a pas démarré, on sort de la fonction.
+        if (!_gameStarted) 
         {
             return;
         } 
 
         //on verifie si toutes les connections on été faite
-        bool allConnected = lineManager.AllConnected(totalConnectionsNeeded);
+        bool allConnected = _lineManager.AllConnected(_totalConnectionsNeeded); 
 
         //si elles ont toute été faite on affiche le bouton pour vérifier
-        validateButton.SetActive(allConnected);
+        _validateButton.SetActive(allConnected); 
     }
 
-    // Fonction appelée quand on clique sur le bouton “Vérifier”
-    public void Validate()
+    // Fonction appelée quand on clique sur le bouton “Vérifier”. La fonction va Calculer les résultats et affiche l'UI de fin.
+    public void Validate() 
     {
-        int correct, wrong;
-        //on récupère le nombre de bonnes connexions et le nombre de mauvaises réponse
-        lineManager.GetResults(out correct, out wrong);
+        // Variables qui recevront les résultats.
+        int correct; 
+        int wrong;
+        //on récupère le nombre de bonnes connexions et le nombre de mauvaises réponse à partir des connexions.
+        _lineManager.GetResults(out correct, out wrong);  
 
         //affichage du texte
-        BackgroundTxtResult.SetActive(true);
-        resultText.gameObject.SetActive(true);
-        resultText.text = "Liaison correct : " + correct + " | Lisaisons fausse : " + wrong;
+        _backgroundTxtResult.SetActive(true); 
+        _resultText.gameObject.SetActive(true);
+        // Message de résultat.
+        _resultText.text = "Liaison correct : " + correct + " | Lisaisons fausse : " + wrong; 
 
-        // on cache le UI
-        retryButton.SetActive(false);
-        ReturnMiniGameChoiseButton.SetActive(false);
+        // on cache l'UI
+        _retryButton.SetActive(false); 
+        _returnMiniGameChoiseButton.SetActive(false); 
 
         //si tout est juste
-        if (wrong == 0)
+        if (wrong == 0) 
         {
-            //on affiche le bouton pour retourner aux choix des mini jeu
-            ReturnMiniGameChoiseButton.SetActive(true);
+            //on affiche le bouton de félicitation
+            _returnMiniGameChoiseButton.SetActive(true); 
         }
         else
         {
-            //sinon on affiche le bouton recommencer
-            retryButton.SetActive(true);
+            //sinon on affiche le bouton de correction
+            _retryButton.SetActive(true); 
         }
-
-        validateButton.SetActive(false);
+        // Cache le bouton valider après validation.
+        _validateButton.SetActive(false); 
         //on bloque les interractions
-        lineManager.SetInteraction(false);
+        _lineManager.SetInteraction(false); 
     }
 
-    // afficher le ui pour corriger
-    public void Retry()
+    // Fonction qui va afficher l'ui pour corriger
+    public void Retry() 
     {
-        BackgroundTxtResult.SetActive(false);
-        resultText.gameObject.SetActive(false);
+        // On cache le fond résultat.
+        _backgroundTxtResult.SetActive(false);
+        // On cache le texte résultat.
+        _resultText.gameObject.SetActive(false);
+        // On cache le bouton retry.
+        _retryButton.SetActive(false);
+        // On cache l'affichage des félicitations.
+        _returnMiniGameChoiseButton.SetActive(false);
 
-        retryButton.SetActive(false);
-        ReturnMiniGameChoiseButton.SetActive(false);
+        // On ré-autorise les clics.
+        _lineManager.SetInteraction(true);
+        // On cache le bouton pour valider valider.
+        _validateButton.SetActive(false); 
+    }
 
-        
-        lineManager.SetInteraction(true);
-
-        validateButton.SetActive(false);
+    // Fonction pour reset le mini jeu.
+    public void ResetMiniGame() 
+    {
+        // On cache le fond du texte de résultat.
+        _backgroundTxtResult.SetActive(false);
+        // On cache le texte des résultats.
+        _resultText.gameObject.SetActive(false);
+        // On cache le bouton de retry.
+        _retryButton.SetActive(false);
+        // On cache le bouton de félicitation.
+        _returnMiniGameChoiseButton.SetActive(false);
+        // On cache le bouton pour valider.
+        _validateButton.SetActive(false);
+        // On marque le jeu comme actif.
+        _gameStarted = true;
+        // On reset toutes les lignes/connexions.
+        _lineManager.ResetMiniGame(); 
     }
 }

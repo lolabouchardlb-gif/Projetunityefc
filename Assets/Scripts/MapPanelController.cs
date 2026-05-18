@@ -19,6 +19,13 @@ public class MapPanelController : MonoBehaviour
     }
     public void Show(string title, string desc, string sceneName)
     {
+        if (panel == null || titleText == null || descriptionText == null)
+        {
+            Debug.LogError($"{nameof(MapPanelController)}: Références UI manquantes sur {name}.", this);
+            return;
+        }
+
+        Debug.Log($"{nameof(MapPanelController)}: Show('{title}', scene '{sceneName}')", this);
         currentSceneName = sceneName;
         if (current != null) StopCoroutine(current);
         current = StartCoroutine(SwitchRoutine(title, desc));

@@ -170,14 +170,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
     l\u2019innu-aimun, ainsi que leur lien avec la nature et leur identit\xE9."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationInnus
+  _panelController: {fileID: 347191436}
 --- !u!114 &4643798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,14 +323,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
     et leur culture tout en s\u2019adaptant au monde moderne."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationCris
+  _panelController: {fileID: 347191436}
 --- !u!114 &64761937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,14 +761,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: "Les Mi\u2019gmaq"
-  description: "Les Mi\u2019gmaq sont un peuple autochtone de l\u2019Est du Canada,
+  _title: "Les Mi\u2019gmaq"
+  _description: "Les Mi\u2019gmaq sont un peuple autochtone de l\u2019Est du Canada,
     principalement pr\xE9sent en Gasp\xE9sie et dans les provinces maritimes. Depuis
     des milliers d\u2019ann\xE9es, leur mode de vie est li\xE9 \xE0 la chasse, \xE0
     la p\xEAche et au respect du territoire. Aujourd\u2019hui, ils continuent de
     pr\xE9server leur langue, leurs traditions et leur culture."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationMigmaq
+  _panelController: {fileID: 347191436}
 --- !u!114 &213292369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1064,14 +1064,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: "Les Mi\u2019gmaq"
-  description: "Les Mi\u2019gmaq sont un peuple autochtone de l\u2019Est du Canada,
+  _title: "Les Mi\u2019gmaq"
+  _description: "Les Mi\u2019gmaq sont un peuple autochtone de l\u2019Est du Canada,
     principalement pr\xE9sent en Gasp\xE9sie et dans les provinces maritimes. Depuis
     des milliers d\u2019ann\xE9es, leur mode de vie est li\xE9 \xE0 la chasse, \xE0
     la p\xEAche et au respect du territoire. Aujourd\u2019hui, ils continuent de
     pr\xE9server leur langue, leurs traditions et leur culture."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationMigmaq
+  _panelController: {fileID: 347191436}
 --- !u!114 &317349140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,14 +1417,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
     et leur culture tout en s\u2019adaptant au monde moderne."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationCris
+  _panelController: {fileID: 347191436}
 --- !u!114 &372644098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1570,14 +1570,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
     et leur culture tout en s\u2019adaptant au monde moderne."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationCris
+  _panelController: {fileID: 347191436}
 --- !u!114 &494651946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,14 +1723,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
     l\u2019innu-aimun, ainsi que leur lien avec la nature et leur identit\xE9."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationInnus
+  _panelController: {fileID: 347191436}
 --- !u!114 &511607846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2026,14 +2026,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
     l\u2019innu-aimun, ainsi que leur lien avec la nature et leur identit\xE9."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationInnus
+  _panelController: {fileID: 347191436}
 --- !u!114 &536738829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2273,14 +2273,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
     l\u2019innu-aimun, ainsi que leur lien avec la nature et leur identit\xE9."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationInnus
+  _panelController: {fileID: 347191436}
 --- !u!1 &638416696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,14 +2694,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Wolastoqiyik
-  description: "Les Wolastoqiyik, aussi appel\xE9s Mal\xE9cites, sont un peuple autochtone
-    de l\u2019Est du Canada. Pr\xE9sents depuis des milliers d\u2019ann\xE9es, ils
-    vivaient principalement de la chasse, de la p\xEAche et des \xE9changes le long
-    de la rivi\xE8re Wolastoq. Aujourd\u2019hui, ils continuent de pr\xE9server leur
-    culture, leur langue et leurs traditions."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _title: Les Wolastoqiyik
+  _description: "Les Wolastoqiyik, aussi appel\xE9s Mal\xE9cites, sont un peuple
+    autochtone de l\u2019Est du Canada. Pr\xE9sents depuis des milliers d\u2019ann\xE9es,
+    ils vivaient principalement de la chasse, de la p\xEAche et des \xE9changes le
+    long de la rivi\xE8re Wolastoq. Aujourd\u2019hui, ils continuent de pr\xE9server
+    leur culture, leur langue et leurs traditions."
+  _sceneName: ChoixExplicationMalecite
+  _panelController: {fileID: 347191436}
 --- !u!1 &820381328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2963,14 +2963,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
     et leur culture tout en s\u2019adaptant au monde moderne."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationCris
+  _panelController: {fileID: 347191436}
 --- !u!114 &939342147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3249,14 +3249,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
     et leur culture tout en s\u2019adaptant au monde moderne."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationCris
+  _panelController: {fileID: 347191436}
 --- !u!114 &992790682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3402,14 +3402,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
     l\u2019innu-aimun, ainsi que leur lien avec la nature et leur identit\xE9."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationInnus
+  _panelController: {fileID: 347191436}
 --- !u!114 &1074005018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3555,14 +3555,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
     et leur culture tout en s\u2019adaptant au monde moderne."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationCris
+  _panelController: {fileID: 347191436}
 --- !u!114 &1133693999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3858,14 +3858,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
     l\u2019innu-aimun, ainsi que leur lien avec la nature et leur identit\xE9."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationInnus
+  _panelController: {fileID: 347191436}
 --- !u!114 &1303015812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4011,14 +4011,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: "Les Mi\u2019gmaq"
-  description: "Les Mi\u2019gmaq sont un peuple autochtone de l\u2019Est du Canada,
+  _title: "Les Mi\u2019gmaq"
+  _description: "Les Mi\u2019gmaq sont un peuple autochtone de l\u2019Est du Canada,
     principalement pr\xE9sent en Gasp\xE9sie et dans les provinces maritimes. Depuis
     des milliers d\u2019ann\xE9es, leur mode de vie est li\xE9 \xE0 la chasse, \xE0
     la p\xEAche et au respect du territoire. Aujourd\u2019hui, ils continuent de
     pr\xE9server leur langue, leurs traditions et leur culture."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationMigmaq
+  _panelController: {fileID: 347191436}
 --- !u!114 &1340034064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4436,8 +4436,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -388.8, y: -9.1}
-  m_SizeDelta: {x: 10, y: 10}
+  m_AnchoredPosition: {x: -388.0506, y: -9.849297}
+  m_SizeDelta: {x: 11.4987, y: 11.4987}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1502663166
 MonoBehaviour:
@@ -4451,14 +4451,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
     et leur culture tout en s\u2019adaptant au monde moderne."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationCris
+  _panelController: {fileID: 347191436}
 --- !u!114 &1502663167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4481,8 +4481,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.83396226, g: 0.83141065, b: 0.82924175, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -5244,14 +5244,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
     l\u2019innu-aimun, ainsi que leur lien avec la nature et leur identit\xE9."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationInnus
+  _panelController: {fileID: 347191436}
 --- !u!114 &1963884962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5697,14 +5697,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
     l\u2019innu-aimun, ainsi que leur lien avec la nature et leur identit\xE9."
-  scene: {fileID: 102900000, guid: 18daa29c5055ef849ade5f37a54d4e28, type: 3}
-  panelController: {fileID: 347191436}
+  _sceneName: ChoixExplicationInnus
+  _panelController: {fileID: 347191436}
 --- !u!114 &2142861153
 MonoBehaviour:
   m_ObjectHideFlags: 0
