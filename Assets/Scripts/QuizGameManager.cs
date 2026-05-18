@@ -28,7 +28,7 @@ public class QuizGameManager : MonoBehaviour
 
     [Header("Couleurs des boutons de réponse")]
     // Couleur du bouton sélectionné.
-    [SerializeField] private Color _selectedColor = Color.yellow; .
+    [SerializeField] private Color _selectedColor = Color.yellow; 
     // Couleur par défaut des boutons.
     [SerializeField] private Color _normalColor = Color.white;
     // Index de la question courante dans _questions.
