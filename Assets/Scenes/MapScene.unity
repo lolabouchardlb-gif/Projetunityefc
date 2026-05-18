@@ -170,8 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
@@ -323,8 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
@@ -761,8 +761,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: "Les Mi\u2019gmaq"
-  description: "Les Mi\u2019gmaq sont un peuple autochtone de l\u2019Est du Canada,
+  _title: "Les Mi\u2019gmaq"
+  _description: "Les Mi\u2019gmaq sont un peuple autochtone de l\u2019Est du Canada,
     principalement pr\xE9sent en Gasp\xE9sie et dans les provinces maritimes. Depuis
     des milliers d\u2019ann\xE9es, leur mode de vie est li\xE9 \xE0 la chasse, \xE0
     la p\xEAche et au respect du territoire. Aujourd\u2019hui, ils continuent de
@@ -1417,8 +1417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
@@ -1570,8 +1570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
@@ -1723,8 +1723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
@@ -2026,8 +2026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
@@ -2273,8 +2273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
@@ -2963,8 +2963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
@@ -3249,8 +3249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
@@ -3402,8 +3402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
@@ -3555,8 +3555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
@@ -3858,8 +3858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
@@ -4011,8 +4011,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: "Les Mi\u2019gmaq"
-  description: "Les Mi\u2019gmaq sont un peuple autochtone de l\u2019Est du Canada,
+  _title: "Les Mi\u2019gmaq"
+  _description: "Les Mi\u2019gmaq sont un peuple autochtone de l\u2019Est du Canada,
     principalement pr\xE9sent en Gasp\xE9sie et dans les provinces maritimes. Depuis
     des milliers d\u2019ann\xE9es, leur mode de vie est li\xE9 \xE0 la chasse, \xE0
     la p\xEAche et au respect du territoire. Aujourd\u2019hui, ils continuent de
@@ -4451,8 +4451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Cris
-  description: "Les Cris sont un peuple autochtone vivant principalement dans le
+  _title: Les Cris
+  _description: "Les Cris sont un peuple autochtone vivant principalement dans le
     nord du Qu\xE9bec, autour de la Baie-James. Depuis des milliers d\u2019ann\xE9es,
     leur mode de vie est li\xE9 \xE0 la chasse, \xE0 la p\xEAche et au territoire.
     Aujourd\u2019hui, ils continuent de pr\xE9server leur langue, leurs traditions
@@ -4481,8 +4481,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.83396226, g: 0.83141065, b: 0.82924175, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -5244,8 +5244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,
@@ -5697,8 +5697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb8510f854f8dc4fb3696af66c4a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapPoint
-  title: Les Innus
-  description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
+  _title: Les Innus
+  _description: "Les Innus sont un peuple autochtone de l\u2019Est du Canada vivant
     principalement sur la C\xF4te-Nord du Qu\xE9bec et au Labrador. Leur territoire
     ancestral, le Nitassinan, occupe une place centrale dans leur culture et leurs
     traditions. Aujourd\u2019hui, les Innus continuent de pr\xE9server leur langue,

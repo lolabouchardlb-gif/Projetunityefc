@@ -1,39 +1,39 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Video;
+using UnityEngine; // Base Unity.
+using UnityEngine.UI; // UI (Slider).
+using UnityEngine.Video; // VideoPlayer.
 
-public class CommandAudio : MonoBehaviour
+public class CommandAudio : MonoBehaviour // Contrôle la lecture audio et synchronise une vidéo avec cet audio.
 {
     [Header("Audio")]
-    [SerializeField] private AudioSource _audioSource; 
-    [SerializeField] private AudioClip _audioClip; 
+    [SerializeField] private AudioSource _audioSource; // Composant qui joue le son.
+    [SerializeField] private AudioClip _audioClip; // Clip audio à jouer.
 
     [Header("Video")]
-    [SerializeField] private VideoPlayer _videoPlayer; 
+    [SerializeField] private VideoPlayer _videoPlayer; // Vidéo à synchroniser avec l'audio.
 
     [Header("UI Buttons")]
-    [SerializeField] private GameObject _playButton; 
-    [SerializeField] private GameObject _pauseButton; 
-    [SerializeField] private GameObject _restartButton; 
+    [SerializeField] private GameObject _playButton; // Bouton Play.
+    [SerializeField] private GameObject _pauseButton; // Bouton Pause.
+    [SerializeField] private GameObject _restartButton; // Bouton Restart.
 
     [Header("Slider")]
-    [SerializeField] private Slider _audioSlider;
+    [SerializeField] private Slider _audioSlider; // Slider d'avancement (ici remis à 0 au restart).
 
     // indique si on est en pause
     private bool _isPaused;
     // indique si l’audio est terminé
     private bool _hasFinished; 
 
-    private void Awake()
+    private void Awake() // Appelé avant Start.
     {
         // empêche Unity VideoPlayer de gérer l’audio (évite conflits et bugs)
-        _videoPlayer.audioOutputMode = VideoAudioOutputMode.None;
+        _videoPlayer.audioOutputMode = VideoAudioOutputMode.None; // La vidéo ne sort pas d'audio.
     }
 
-    private void Start()
+    private void Start() // Initialisation.
     {
         // on assigne le clip audio au lecteur
-        _audioSource.clip = _audioClip;
+        _audioSource.clip = _audioClip; // Associe le clip au AudioSource.
 
         // état initial : pas en pause
         _isPaused = false;
@@ -42,19 +42,19 @@ public class CommandAudio : MonoBehaviour
         _hasFinished = false;
 
         // mise à jour initiale des boutons UI
-        UpdateButtons();
+        UpdateButtons(); // Met l'UI dans le bon état au départ.
     }
 
-    private void Update()
+    private void Update() // Boucle par frame.
     {
         // synchronise la vidéo avec l’audio à chaque frame
-        SyncAudioAndVideo();
+        SyncAudioAndVideo(); // Synchronise l'état de la vidéo avec l'audio.
 
         // vérifie si l’audio est terminé
-        CheckIfFinished();
+        CheckIfFinished(); // Détecte si l'audio est terminé.
 
         // met à jour l’UI (boutons play/pause/restart)
-        UpdateButtons();
+        UpdateButtons(); // Met à jour les boutons selon l'état.
     }
 
     private void SyncAudioAndVideo()
@@ -108,7 +108,7 @@ public class CommandAudio : MonoBehaviour
     }
 
     // bouton play
-    public void Play()
+    public void Play() // Handler bouton Play.
     {
         // sécurité : si clip non assigné
         if (_audioSource.clip == null)
@@ -128,7 +128,7 @@ public class CommandAudio : MonoBehaviour
     }
 
     // bouton pause
-    public void Pause()
+    public void Pause() // Handler bouton Pause.
     {
         // pause audio
         _audioSource.Pause();
@@ -141,7 +141,7 @@ public class CommandAudio : MonoBehaviour
     }
 
     // bouton restart
-    public void Restart()
+    public void Restart() // Handler bouton Restart.
     {
         // on reset les états
         _hasFinished = false;
@@ -172,7 +172,7 @@ public class CommandAudio : MonoBehaviour
     }
 
     // gestion des boutons
-    private void UpdateButtons()
+    private void UpdateButtons() // Affiche/cache les boutons selon l'état (playing/paused/finished).
     {
         // si la lecture est terminée
         if (_hasFinished)
@@ -205,7 +205,7 @@ public class CommandAudio : MonoBehaviour
     }
 
     // arrêter la vidéo
-    private void StopVideo()
+    private void StopVideo() // Stoppe et remet la vidéo au début (fonction utilitaire).
     {
         _videoPlayer.Stop();
         _videoPlayer.time = 0f;

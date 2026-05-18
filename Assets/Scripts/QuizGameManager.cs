@@ -1,207 +1,253 @@
-using TMPro;
-using UnityEngine;
+using TMPro; 
+using UnityEngine; 
 using UnityEngine.UI;
-using static QuestionsPeupleUn;
+// On permet d'utiliser directement le type Question.
+using static QuestionsPeupleUn; 
 
-public class QuizGameManager : MonoBehaviour
+public class QuizGameManager : MonoBehaviour 
 {
     [Header("Questions")]
-    public Question[] questions;
+    // Liste des questions du quiz.
+    [SerializeField] private Question[] _questions; 
 
     [Header("UI")]
-    public TMP_Text questionText;
-    public TMP_Text progressText;
-    public TMP_Text feedbackText;
-
-    public Button[] answerButtons;
-    public GameObject validateButton;
-    public GameObject nextButton;
-    public GameObject returnMiniGameChoiseButton;
+    // Texte de la question affichée.
+    [SerializeField] private TMP_Text _questionText;
+    // Texte "Question X/Y".
+    [SerializeField] private TMP_Text _progressText;
+    // Texte "Bonne/Mauvaise réponse".
+    [SerializeField] private TMP_Text _feedbackText;
+    // Boutons pour les réponses.
+    [SerializeField] private Button[] _answerButtons;
+    // Bouton "Valider".
+    [SerializeField] private GameObject _validateButton;
+    // Bouton "Suivant".
+    [SerializeField] private GameObject _nextButton;
+    // Bouton de félicitation.
+    [SerializeField] private GameObject _returnMiniGameChoiseButton; 
 
     [Header("Couleurs des boutons de réponse")]
-    public Color selectedColor = Color.yellow;
-    public Color normalColor = Color.white;
+    // Couleur du bouton sélectionné.
+    [SerializeField] private Color _selectedColor = Color.yellow; 
+    // Couleur par défaut des boutons.
+    [SerializeField] private Color _normalColor = Color.white;
+    // Index de la question courante dans _questions.
+    private int _currentQuestion;
+    // Index de la réponse choisie (-1 = aucune).
+    private int _selectedAnswer = -1; 
 
-    private int currentQuestion = 0;
-    private int selectedAnswer = -1;
-
-    private void Start()
+    private void Start() 
     {
+        // On active l'UI du quiz.
         SetGameState(true);
-
-        validateButton.SetActive(false);
-        nextButton.SetActive(false);
-        feedbackText.gameObject.SetActive(false);
-        returnMiniGameChoiseButton.SetActive(false);
-
-        DisplayQuestion();
+        // On cache le bouton "Valider" au départ.
+        _validateButton.SetActive(false);
+        // On cache le bouton "Suivant" au départ.
+        _nextButton.SetActive(false);
+        // On cache le feedback au départ.
+        _feedbackText.gameObject.SetActive(false);
+        // On cache le bouton de félicitation au départ.
+        _returnMiniGameChoiseButton.SetActive(false);
+        // On affiche la première question.
+        DisplayQuestion(); 
     }
 
-    private void SetGameState(bool state)
+    // Fonction qui active/désactive les éléments UI du quiz.
+    private void SetGameState(bool state) 
     {
 
         // UI du quiz
-        questionText.gameObject.SetActive(state);
-        progressText.gameObject.SetActive(state);
-
-        foreach (Button btn in answerButtons)
+        _questionText.gameObject.SetActive(state); 
+        _progressText.gameObject.SetActive(state);
+        // Pour chaque bouton de réponse.
+        foreach (Button btn in _answerButtons) 
         {
-            btn.gameObject.SetActive(state);
+            // On affiche/cache le bouton.
+            btn.gameObject.SetActive(state); 
         }
-
-        validateButton.SetActive(false);
-        nextButton.SetActive(false);
-        feedbackText.gameObject.SetActive(false);
+        // Quand on ré-active, on repart sans validation.
+        _validateButton.SetActive(false);
+        // On cache le bouton "Suivant".
+        _nextButton.SetActive(false);
+        // On cache le feedback.
+        _feedbackText.gameObject.SetActive(false); 
     }
 
-    public void StartGame()
+    // Méthode appelée quand on commencer le quiz.
+    public void StartGame() 
     {
-        SetGameState(true);
+        // On active l'UI du quiz.
+        SetGameState(true); 
         //on affiche la question
-        DisplayQuestion();
+        DisplayQuestion(); 
     }
 
-    //fonction servant a affichier la question, les boutons pour répondre a la question et ou on en est
-    public void DisplayQuestion()
+    //fonction servant a afficher la question, les boutons pour répondre a la question et ou on en est
+    public void DisplayQuestion() 
     {
-        //on récupère la question
-        Question q = questions[currentQuestion];
+        //on récupère la question selon l'index actuel.
+        Question q = _questions[_currentQuestion]; 
 
         //on affiche la question
-        questionText.text = q.questionText;
+        _questionText.text = q.QuestionText; 
 
         //on affiche ou on en est par rapport a toutes les questions
-        progressText.text = "Question " + (currentQuestion + 1) + "/" + questions.Length;
-
+        _progressText.text = "Question " + (_currentQuestion + 1) + "/" + _questions.Length; 
         //aucune réponse sélectionnée
-        selectedAnswer = -1;
+        _selectedAnswer = -1;
 
         //on remet tout à 0
-        validateButton.SetActive(false);
-        nextButton.SetActive(false);
-        feedbackText.gameObject.SetActive(false);
+        // On cache le bouton "Valider" tant que rien n'est choisi.
+        _validateButton.SetActive(false);
+        // On cache le bouton "Suivant".
+        _nextButton.SetActive(false);
+        // On cache le feedback.
+        _feedbackText.gameObject.SetActive(false); 
 
         //on boucle sur chaque bouton de réponse
-        for (int i = 0; i < answerButtons.Length; i++)
+        for (int i = 0; i < _answerButtons.Length; i++) 
         {
             //on active les boutons
-            answerButtons[i].interactable = true;
+            _answerButtons[i].interactable = true; 
 
             //on réinitialise la couleur à normal pour les bouton de choix de réponse
-            answerButtons[i].image.color = normalColor;
+            _answerButtons[i].image.color = _normalColor; 
 
             //on met le texte de la réponse
-            answerButtons[i].GetComponentInChildren<TMP_Text>().text = q.answers[i];
+            _answerButtons[i].GetComponentInChildren<TMP_Text>().text = q.Answers[i]; 
 
             // index = numéro de la réponse
-            int index = i;
+            int index = i; 
 
             //on enlève les anciens clics
-            answerButtons[i].onClick.RemoveAllListeners();
+            _answerButtons[i].onClick.RemoveAllListeners();
 
-            //on ajoute un nouveau clic et on appelle la fonction SelectAnswer(index)
-            answerButtons[i].onClick.AddListener(() => SelectAnswer(index));
+            //on ajoute un nouveau clic et on appelle la fonction SelectAnswer(index) pour sélectionner cette réponse.
+            _answerButtons[i].onClick.AddListener(() => SelectAnswer(index)); 
         }
     }
 
-    //Quand on clique sur une réponse
-    public void SelectAnswer(int index)
+    // Fonction appeller quand on clique sur une réponse
+    public void SelectAnswer(int index) 
     {
         //on enregistre la réponse choisie
-        selectedAnswer = index;
+        _selectedAnswer = index; 
 
         //on affiche le bouton Valider
-        validateButton.SetActive(true);
+        _validateButton.SetActive(true); 
 
-        Debug.Log("Réponse sélectionnée : " + index);
+        Debug.Log("Réponse sélectionnée : " + index); 
 
-        //Reset couleurs
-        foreach (Button btn in answerButtons)
+        //Reset des couleurs
+        foreach (Button btn in _answerButtons) 
         {
-            btn.image.color = normalColor;
+            btn.image.color = _normalColor; 
         }
 
         //Couleur du bouton sélectionné
-        answerButtons[index].image.color = selectedColor;
+        _answerButtons[index].image.color = _selectedColor; 
     }
 
     //fonction appelée quand on clique sur le bouton Valider
-    public void ValidateAnswer()
+    public void ValidateAnswer() 
     {
-        if (selectedAnswer == -1) return;
+        // Si rien n'est choisi, alors on ne valide pas.
+        if (_selectedAnswer == -1) 
+        {
+            return; 
+        } 
 
         //on récupère la question
-        Question q = questions[currentQuestion];
+        Question q = _questions[_currentQuestion]; 
 
-        //on affiche le feedback (Vrai/faux)
-        feedbackText.gameObject.SetActive(true);
+        //on affiche le feedback 
+        _feedbackText.gameObject.SetActive(true); 
 
         //on compare la réponse sélectionné avec la bonne réponse, si la réponse sélectionner est égal à la bonne réponse
-        if (selectedAnswer == q.correctAnswerIndex)
+        if (_selectedAnswer == q.CorrectAnswerIndex) 
         {
             //on affiche le fait que ça soit la bonne réponse
-            feedbackText.text = "Bonne réponse !";
+            _feedbackText.text = "Bonne réponse !"; 
 
             //on affiche le bouton pour passer à la prochaine question
-            nextButton.SetActive(true);
-            validateButton.SetActive(false);
+            _nextButton.SetActive(true); 
+            _validateButton.SetActive(false); 
 
             //on bloque les boutons
-            foreach (Button btn in answerButtons)
+            foreach (Button btn in _answerButtons) 
             {
-                btn.interactable = false;
+                // On empêche de changer la réponse après validation.
+                btn.interactable = false; 
             }
         }
         //si ce n'est pas la bonne réponse on dit que c'est la mauvaise réponse
         else
         {
-            feedbackText.text = "Mauvaise réponse, réessaie !";
+            _feedbackText.text = "Mauvaise réponse, réessaie !"; 
         }
     }
 
-    //Question suivante
-    public void NextQuestion()
+    // Fonction pour aller a la question suivante
+    public void NextQuestion() 
     {
         //on passe à la question suivante
-        currentQuestion++;
+        _currentQuestion++; 
 
         //s’il reste des questions
-        if (currentQuestion < questions.Length)
+        if (_currentQuestion < _questions.Length) 
         {
             //on affiche une question
-            DisplayQuestion();
+            DisplayQuestion(); 
         }
         //s'il n'y a plus de question
         else
         {
             //on affiche la fin du quizz
-            EndQuiz();
+            EndQuiz(); 
         }
     }
 
-    //affichage de la fin du quizz
-    public void EndQuiz()
+    // Fonction pour l'affichage de la fin du quizz
+    public void EndQuiz() 
     {
         //on dit que le quizz est terminer
-        questionText.text = "Quiz terminé !";
+        _questionText.text = "Quiz terminé !"; 
 
         //on enlève le compteur de question
-        progressText.text = "";
+        _progressText.text = ""; 
 
         //on dit "Bravo" au joueur
-        feedbackText.gameObject.SetActive(true);
-        feedbackText.text = "Bravo !";
-
-        validateButton.SetActive(false);
-        nextButton.SetActive(false);
+        _feedbackText.gameObject.SetActive(true);
+        // Message de félicitations.
+        _feedbackText.text = "Bravo !";
+        // On cache le bouton "Valider".
+        _validateButton.SetActive(false);
+        // On cache le bouton "Suivant".
+        _nextButton.SetActive(false); 
 
         //on cache toutes les réponses
-        foreach (Button btn in answerButtons)
+        foreach (Button btn in _answerButtons) 
         {
-            btn.gameObject.SetActive(false);
+            // On masque les boutons de réponse.
+            btn.gameObject.SetActive(false); 
         }
 
         //on affiche le bouton pour retouner aux vhoix des minis jeux
-        returnMiniGameChoiseButton.SetActive(true);
+        _returnMiniGameChoiseButton.SetActive(true); 
+    }
+
+    // Fonction pour reset le mini jeu.
+    public void ResetMiniGame() 
+    {
+        // On revient à la première question.
+        _currentQuestion = 0;
+        // Aucune réponse sélectionnée.
+        _selectedAnswer = -1;
+        // Cache le bouton de félicitation.
+        _returnMiniGameChoiseButton.SetActive(false);
+        // On réactive l'UI du quiz.
+        SetGameState(true);
+        // On réaffiche la première question.
+        DisplayQuestion(); 
     }
 }

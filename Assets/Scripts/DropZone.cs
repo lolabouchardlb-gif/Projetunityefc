@@ -1,60 +1,77 @@
-using UnityEngine;
+using UnityEngine; 
 
-public class DropZone : MonoBehaviour
+public class DropZone : MonoBehaviour 
 {
     //liste des objects valide dans la drop zone
-    public string[] validObjectIDs;
+    [SerializeField] private string[] _validObjectIds; 
 
     //object présent dans la zone
-    private DragAndDrop _currentObject;
+    private DragAndDrop _currentObject; 
 
     //fonction appeller quand un object rentre dans la drop zone
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) 
     {
-        //on récupère l'object
-        DragAndDrop obj = collision.GetComponent<DragAndDrop>();
+        // On récupère le script DragAndDrop sur l'objet entrant.
+        DragAndDrop obj = collision.GetComponent<DragAndDrop>(); 
 
-        //si il a ule script on enregistre l'object dans la drop zone
-        if (obj != null)
+        //si il a le script on enregistre l'object dans la drop zone
+        if (obj != null) 
         {
             Debug.Log("Entré : " + obj.name);
-            _currentObject = obj;
+            // On stocke l'objet présent dans la zone.
+            _currentObject = obj; 
         }
     }
 
     //fonction appeller quand un object sort de la drop zone
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision) 
     {
-        //on récupère l'object
+        // On récupère le script DragAndDrop de l'objet sortant.
         DragAndDrop obj = collision.GetComponent<DragAndDrop>();
 
-        //on le supprime de la zone
-        if (obj != null && obj == _currentObject)
+        // Si l'objet sortant est celui enregistré.
+        
+        if (obj != null && obj == _currentObject) 
         {
-            Debug.Log("Sorti : " + obj.name);
-            _currentObject = null;
+            Debug.Log("Sorti : " + obj.name); 
+            //on le supprime de la zone
+            _currentObject = null; 
         }
     }
 
     //fonction appeller pour savoir si la drop zone a les bon objects
-    public bool IsCorrect()
+    public bool IsCorrect() 
     {
         //si la drop zone n'a pas d'object on retourne faux
-        if (_currentObject == null) return false;
+        if (_currentObject == null) 
+        {
+            return false; 
+        } 
         //on parcourt tout les objects autoriser de la drop zone
-        foreach (string id in validObjectIDs)
+        foreach (string id in _validObjectIds) // Vérifie chaque ID autorisé...
         {
             //si l'object a le bon ID on le valide
-            if (_currentObject.objectID == id)
-                return true;
+            if (_currentObject.ObjectId == id) 
+            {
+                return true; 
+            } 
+                
         }
         //sinon on ne valide pas l'object
-        return false;
+        return false; 
     }
 
     //fonction pour savoir si la drop zone a un object
-    public bool IsFilled()
+    public bool IsFilled() 
     {
-        return _currentObject != null;
+        // Retourne True si on a une référence d'objet.
+        return _currentObject != null; 
+    }
+
+    // Fonction qui reset la drop zone.
+    public void ResetMiniGame() 
+    {
+        // On vide la zone.
+        _currentObject = null; 
     }
 }

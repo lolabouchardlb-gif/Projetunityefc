@@ -3,144 +3,173 @@ using UnityEngine.UI;
 using TMPro; 
 using UnityEngine.Video; 
 
-public class ControllerAdvancementAudio : MonoBehaviour
+public class ControllerAdvancementAudio : MonoBehaviour 
 {
     [Header("Audio")]
-    [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip _audioClip;
+    [SerializeField] private AudioSource _audioSource; 
+    [SerializeField] private AudioClip _audioClip; 
     
     [Header("Video")]
-    [SerializeField] private VideoPlayer _videoPlayer;
+    // Vidéo boule synchronisée avec l'audio.
+    [SerializeField] private VideoPlayer _videoPlayer; 
     
     [Header("UI")]
+    // Slider d'avancement de l'audio.
     [SerializeField] private Slider _slider;
+    // Texte des sous-titres (affiché progressivement).
     [SerializeField] private TMP_Text _subtitleText;
-
-    [SerializeField] private ScrollRect _scrollRect;
+    // ScrollRect pour auto-scroller les sous-titres vers le bas.
+    [SerializeField] private ScrollRect _scrollRect; 
 
     [TextArea(5, 10)]
-    [SerializeField] private string _fullText;
+    // Texte complet à révéler au fur et à mesure.
+    [SerializeField] private string _fullText; 
 
     [Header("Video affichage mot")]
+    // VideoPlayer pour afficher des clips des mots.
     [SerializeField] private VideoPlayer _videoWordPlayer;
-    [SerializeField] private GameObject _videoWordDisplay;
+    // Objet UI contenant l'affichage de la vidéo des mots.
+    [SerializeField] private GameObject _videoWordDisplay; 
 
     [Header("Video Timeline ")]
-    [SerializeField] private float[] videoStartTimes;
-    [SerializeField] private float[] videoEndTimes;
-    [SerializeField] private VideoClip[] videoClips;
-
-    private int currentVideoIndex = -1;
+    // Début de chaque vidéo de mots (en secondes sur la timeline audio).
+    [SerializeField] private float[] _videoStartTimes;
+    // Fin de chaque vidéo de mots (en secondes).
+    [SerializeField] private float[] _videoEndTimes;
+    // Clips à jouer pendant les fenêtres de temps.
+    [SerializeField] private VideoClip[] _videoClips;
+    // Index de la vidéo de mot actuellement affichée (-1 = aucune).
+    private int _currentVideoIndex = -1; 
 
     // nombre total de caractères du texte
-    private int _totalCharacters;
+    private int _totalCharacters; 
 
     // indique si l’audio est terminé
-    private bool _hasFinished;
+    private bool _hasFinished; 
 
-    void Start()
+    private void Start() 
     {
         // on assigne le clip audio au lecteur
-        _audioSource.clip = _audioClip;
+        _audioSource.clip = _audioClip; 
 
         // slider commence à 0 et va jusqu’à la durée du son
-        _slider.minValue = 0;
+        _slider.minValue = 0; 
         _slider.maxValue = _audioClip.length;
 
-        // on calcule la taille totale du texte
-        _totalCharacters = _fullText.Length;
+        // On stocke la taille du texte.
+        _totalCharacters = _fullText.Length; 
 
         // on remet tout à zéro au niveau de l'ui au départ
         ResetUI();
-
+        // Si on a un VideoPlayer de mot
         if (_videoWordPlayer != null) 
         {
-            _videoWordPlayer.loopPointReached += OnEventVideoFinished;
+            // On écoute la fin du clip.
+            _videoWordPlayer.loopPointReached += OnEventVideoFinished; 
         }
-
-        _videoWordDisplay.SetActive(false);
-
-
+        // On cache l'affichage des vidéo de mot au départ.
+        _videoWordDisplay.SetActive(false); 
     }
 
 
-    void Update()
+    private void Update() 
     {
         // si l’audio est fini, on stop tout
-        if (_hasFinished) return;
+        if (_hasFinished) 
+        {
+            return;
+        }  
 
         // on récupère le temps actuel de l’audio
-        float _time = _audioSource.time;
+        float time = _audioSource.time; 
 
         // on met à jour le slider avec ce temps
-        _slider.value = _time;
+        _slider.value = time; 
 
         // on met à jour les sous-titres
-        UpdateSubtitles(_time);
+        UpdateSubtitles(time); 
 
         // on force le scroll vers le bas
-        AutoScroll();
+        AutoScroll(); 
 
         // on vérifie si l’audio est terminé
         CheckFinish();
 
-        UpdateVideoEvents(_time);
+        // On joue/arrête les vidéos de mot selon la timeline.
+        UpdateVideoEvents(time); 
     }
 
-    void UpdateVideoEvents(float time)
+    // Fonction qui met à jour la vidéo de mot selon le temps actuel de l’audio.
+    private void UpdateVideoEvents(float time) 
     {
-        for (int i = 0; i < videoClips.Length; i++)
+        // On parcourt tous les clips/événements disponibles avec i qui est l'index de l’événement.
+        for (int i = 0; i < _videoClips.Length; i++) 
         {
-            if (time >= videoStartTimes[i] && time < videoEndTimes[i])
+            // Si le temps est dans la fenêtre de l’événement i (start inclus, end exclus)
+            if (time >= _videoStartTimes[i] && time < _videoEndTimes[i])
             {
-                if (currentVideoIndex != i)
+                // Si la vidéo affichée n’est pas déjà celle de i, on la lance.
+                if (_currentVideoIndex != i) 
                 {
-                    PlayEventVideo(i);
+                    // On joue le clip associé à l’événement i.
+                    PlayEventVideo(i); 
                 }
-                return;
+                // On sort car on a trouvé l’événement correspondant.
+                return; 
             }
         }
 
+        // Si aucun événement ne correspond au temps actuel, on cache la vidéo de mot.
         HideEventVideo();
     }
 
-    void PlayEventVideo(int index)
+    // Fonction qui démarre et affiche la vidéo de mot à l’index donné.
+    private void PlayEventVideo(int index) 
     {
-        // si déjà la bonne vidéo → ne rien faire
-        if (currentVideoIndex == index && _videoWordPlayer.isPlaying) 
+        // Si c’est déjà le bon index ET que la vidéo est déjà en lecture, ne rien faire.
+        if (_currentVideoIndex == index && _videoWordPlayer.isPlaying)
         {
-            return;
+            return; 
         }
-            
-
-        currentVideoIndex = index;
-
-        _videoWordPlayer.Stop(); 
-
-        _videoWordPlayer.clip = videoClips[index];
-        _videoWordPlayer.gameObject.SetActive(true);
-        _videoWordDisplay.SetActive(true);
-        _videoWordPlayer.time = 0;
-
-        _videoWordPlayer.Play();
-    }
-
-    void HideEventVideo()
-    {
-        if (currentVideoIndex == -1) 
-        {
-            return;
-        } 
-
+        // Mémorise quel vidéo de mot est actuellement actif.
+        _currentVideoIndex = index;
+        // On stoppe l’ancien clip (si un autre jouait déjà).
         _videoWordPlayer.Stop();
-        _videoWordPlayer.gameObject.SetActive(false);
-        _videoWordDisplay.SetActive(false);
-        currentVideoIndex = -1;
+        // On assigne le nouveau clip à jouer.
+        _videoWordPlayer.clip = _videoClips[index];
+        // On active l’objet qui porte le VideoPlayer.
+        _videoWordPlayer.gameObject.SetActive(true);
+        // On active le conteneur UI d’affichage.
+        _videoWordDisplay.SetActive(true);
+        // On remet la lecture au début du clip.
+        _videoWordPlayer.time = 0;
+        // On lance la lecture du clip.
+        _videoWordPlayer.Play(); 
     }
 
-    void OnEventVideoFinished(VideoPlayer vp)
+    // Fonction qui cache et arrête la vidéo de mot si elle est actuellement affichée.
+    private void HideEventVideo() 
     {
-        HideEventVideo();
+        // Si aucun événement n’est affiché, on ne fait rien. -1 veux dire “aucune vidéo de mot active”.
+        if (_currentVideoIndex == -1)
+        {
+            return; 
+        }
+        // On ttoppe la vidéo de mot.
+        _videoWordPlayer.Stop();
+        // On désactive l’objet du VideoPlayer.
+        _videoWordPlayer.gameObject.SetActive(false);
+        // On désactive le conteneur UI.
+        _videoWordDisplay.SetActive(false);
+        // OnRreset l’état : aucune vidéo de mot active.
+        _currentVideoIndex = -1; 
+    }
+
+    // Fonction appelé quand la vidéo événement atteint la fin.
+    private void OnEventVideoFinished(VideoPlayer vp) 
+    {
+        // Quand le clip est finit, on cache l’affichage de la vidéo de mot.
+        HideEventVideo(); 
     }
 
 
@@ -173,7 +202,7 @@ public class ControllerAdvancementAudio : MonoBehaviour
 
 
     //fonction pour faire jouer l'audio et la vidéo
-    void PlayBoth()
+    private void PlayBoth()
     {
         // on sort du mode "fin"
         _hasFinished = false;
@@ -191,7 +220,7 @@ public class ControllerAdvancementAudio : MonoBehaviour
 
 
     //fonction pour mettre en pause l'audio et la vidéo
-    void PauseBoth()
+    private void PauseBoth()
     {
         //on met en pause l'audio
         _audioSource.Pause();
@@ -206,21 +235,21 @@ public class ControllerAdvancementAudio : MonoBehaviour
 
 
     //fonction pour mise à jour les sous-titres
-    void UpdateSubtitles(float _time)
+    private void UpdateSubtitles(float time)
     {
         // progression entre 0 et 1
-        float _progress = Mathf.Clamp01(_time / _audioClip.length);
+        float progress = Mathf.Clamp01(time / _audioClip.length);
 
         // nombre de caractères à afficher selon progression
-        int _charCount = Mathf.Clamp(Mathf.RoundToInt(_progress * _totalCharacters), 0, _totalCharacters);
+        int charCount = Mathf.Clamp(Mathf.RoundToInt(progress * _totalCharacters), 0, _totalCharacters);
 
         // on affiche une partie du texte
-        _subtitleText.text = _fullText.Substring(0, _charCount);
+        _subtitleText.text = _fullText.Substring(0, charCount);
     }
 
 
     // fonction pour le scroll automatique du texte vers le bas
-    void AutoScroll()
+    private void AutoScroll()
     {
         //on force Unity à recalculer UI
         Canvas.ForceUpdateCanvases();
@@ -230,7 +259,7 @@ public class ControllerAdvancementAudio : MonoBehaviour
     }
 
     //fonction pour vérifier si l’audio est presque fini
-    void CheckFinish()
+    private void CheckFinish()
     {
         if (_audioSource.time >= _audioClip.length - 0.05f)
         {
@@ -262,7 +291,7 @@ public class ControllerAdvancementAudio : MonoBehaviour
 
 
     //fonction pour reset l'audio et la vidéo
-    void ResetAll()
+    private void ResetAll()
     {
         //on stop l'audio
         _audioSource.Stop(); 
@@ -286,7 +315,7 @@ public class ControllerAdvancementAudio : MonoBehaviour
 
 
     //fonction pour reset l'UI
-    void ResetUI()
+    private void ResetUI()
     {
         //on vide l'affichage du texte
         _subtitleText.text = "";

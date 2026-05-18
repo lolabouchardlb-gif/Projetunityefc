@@ -16,13 +16,13 @@ public class MapPoint : MonoBehaviour
 
     {
 
-        Debug.Log("Point cliqué");
+        Debug.Log("Point cliquï¿½");
 
         if (panelController == null)
 
         {
 
-            Debug.LogError("PanelController pas assigné");
+            Debug.LogError("PanelController pas assignï¿½");
 
             return;
 

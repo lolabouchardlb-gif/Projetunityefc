@@ -1,36 +1,41 @@
-using System.Collections;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Video;
+using System.Collections; 
+using UnityEngine; 
+using UnityEngine.SceneManagement; 
+using UnityEngine.Video; 
 
-public class TransitionManager : MonoBehaviour
+public class TransitionManager : MonoBehaviour 
 {
+    // Le VideoPlayer qui lit la vidéo de transition.
+    [SerializeField] private VideoPlayer _transitionVideo;
+    // L'objet UI/Canvas qui affiche la transition.
+    [SerializeField] private GameObject _transitionObject; 
 
-    public VideoPlayer transitionVideo;
-
-    public GameObject transitionObject;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start() 
     {
-        transitionObject.SetActive(false);
+        // On cache la transition au lancement de la scène.
+        _transitionObject.SetActive(false); 
     }
 
-
-    public void PlayTransitionAndLoadScene(string sceneName)
+    // Méthode appelée pour jouer la vidéo de transition et changer de scène.
+    public void PlayTransitionAndLoadScene(string sceneName) 
     {
-        StartCoroutine(TransitionCoroutine(sceneName));
+        // On lance la coroutine qui joue la vidéo puis charge la scène.
+        StartCoroutine(TransitionCoroutine(sceneName)); 
     }
 
-    IEnumerator TransitionCoroutine(string sceneName)
+    // Coroutine qui exécute la transition.
+    private IEnumerator TransitionCoroutine(string sceneName) 
     {
-        transitionObject.SetActive(true); // Affiche la vid�o
-        transitionVideo.Play();
+        // On affiche l'objet de transition.
+        _transitionObject.SetActive(true);
+        // On démarre la lecture de la vidéo de transition.
+        _transitionVideo.Play(); 
 
-        // Attend que la vid�o soit finie
-        yield return new WaitForSeconds((float)transitionVideo.clip.length);
+        // On attend que la vidéo soit finie.
+        yield return new WaitForSeconds((float)_transitionVideo.clip.length); 
 
-        // Charge la nouvelle sc�ne
-        SceneManager.LoadScene(sceneName);
+        // On charge la nouvelle scène.
+        SceneManager.LoadScene(sceneName); 
     }
 }
+
