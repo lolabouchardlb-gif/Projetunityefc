@@ -523,11 +523,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1347796842859504746, guid: 0554f487427852f4a894763eeb64e5e9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 834.657
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1347796842859504746, guid: 0554f487427852f4a894763eeb64e5e9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -108.03775
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1347796842859504746, guid: 0554f487427852f4a894763eeb64e5e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -773,7 +773,6 @@ RectTransform:
   - {fileID: 1658052878}
   - {fileID: 1774444559}
   - {fileID: 2007451579}
-  - {fileID: 8729425982232709572}
   - {fileID: 785804849}
   - {fileID: 1951227146}
   - {fileID: 907491057}
@@ -781,6 +780,7 @@ RectTransform:
   - {fileID: 453843939}
   - {fileID: 1115614557}
   - {fileID: 1378141395}
+  - {fileID: 8729425982232709572}
   - {fileID: 546422925}
   - {fileID: 457418460}
   m_Father: {fileID: 0}
@@ -1928,6 +1928,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1643455784 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9008861114738556816, guid: 0c1767aa0ce7f1b4b966bf7a1a95c2ef, type: 3}
+  m_PrefabInstance: {fileID: 230823828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d6fae1e89cc76499f6cab270090652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TransitionManager
 --- !u!1 &1658052877
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,6 +2708,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1288089325173103280, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1643455784}
+    - target: {fileID: 1288089325173103280, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTransitionAndLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288089325173103280, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288089325173103280, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465795161522285446, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1643455784}
+    - target: {fileID: 1465795161522285446, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTransitionAndLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465795161522285446, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465795161522285446, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: miniJeuQuizzMalecite
+      objectReference: {fileID: 0}
     - target: {fileID: 1790165153306769114, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2917,6 +2960,54 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1643455784}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTransitionAndLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: ChoixExplicationMalecite
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165678486161064598, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548041012637509400, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1643455784}
+    - target: {fileID: 4548041012637509400, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTransitionAndLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548041012637509400, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548041012637509400, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: miniJeuRelierMalecite
+      objectReference: {fileID: 0}
     - target: {fileID: 5068692377072129225, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3016,6 +3107,38 @@ PrefabInstance:
     - target: {fileID: 6322617970888693246, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913002633258862659, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1643455784}
+    - target: {fileID: 6913002633258862659, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTransitionAndLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913002633258862659, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913002633258862659, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MapScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1643455784}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTransitionAndLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: miniJeuDragAndDropMalecite
       objectReference: {fileID: 0}
     - target: {fileID: 7379541458732518295, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
       propertyPath: m_Interactable

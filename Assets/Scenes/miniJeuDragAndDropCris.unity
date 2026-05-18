@@ -2580,6 +2580,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 929653048337370707, guid: 221eb06f166706a479e3dbebd9a33960, type: 3}
+      propertyPath: _objectId
+      value: Rouge
+      objectReference: {fileID: 0}
     - target: {fileID: 1101684952433008135, guid: 221eb06f166706a479e3dbebd9a33960, type: 3}
       propertyPath: m_Name
       value: ObjetDragAndDrop
@@ -2707,6 +2711,14 @@ PrefabInstance:
     - target: {fileID: 1931040337191677336, guid: 71b68ac8242df1b48badef14b6974cbe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348730961591868482, guid: 71b68ac8242df1b48badef14b6974cbe, type: 3}
+      propertyPath: _validObjectIds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348730961591868482, guid: 71b68ac8242df1b48badef14b6974cbe, type: 3}
+      propertyPath: '_validObjectIds.Array.data[0]'
+      value: Rouge
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
