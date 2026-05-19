@@ -961,7 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2501,6 +2501,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoucheTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 4709312759016661584, guid: 881d7e0edae62bb4dabc8a21c2c466d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2890,6 +2894,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1288089325173103280, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 173190310}
+    - target: {fileID: 1288089325173103280, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTransitionAndLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288089325173103280, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288089325173103280, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465795161522285446, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 173190310}
+    - target: {fileID: 1465795161522285446, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTransitionAndLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465795161522285446, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465795161522285446, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: miniJeuQuizzMigmaq
+      objectReference: {fileID: 0}
     - target: {fileID: 1790165153306769114, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3146,6 +3182,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4548041012637509400, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 173190310}
+    - target: {fileID: 4548041012637509400, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTransitionAndLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548041012637509400, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548041012637509400, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: miniJeuRelierMigmaq
+      objectReference: {fileID: 0}
     - target: {fileID: 5068692377072129225, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3253,6 +3305,38 @@ PrefabInstance:
     - target: {fileID: 6322617970888693246, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913002633258862659, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 173190310}
+    - target: {fileID: 6913002633258862659, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTransitionAndLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913002633258862659, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913002633258862659, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MapScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 173190310}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTransitionAndLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927137544896350798, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: miniJeuDragAndDropMigmaq
       objectReference: {fileID: 0}
     - target: {fileID: 7379541458732518295, guid: 1943eb2c164aa9c48adabc290edd54dc, type: 3}
       propertyPath: m_Interactable

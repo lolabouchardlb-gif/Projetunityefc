@@ -221,6 +221,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoucheTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 4709312759016661584, guid: 881d7e0edae62bb4dabc8a21c2c466d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -353,7 +357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INNUS
+  m_text: MIGMAQ
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c88eb7cb05d7ac4439de48d0651450c3, type: 2}
   m_sharedMaterial: {fileID: -989454911570715982, guid: c88eb7cb05d7ac4439de48d0651450c3, type: 2}

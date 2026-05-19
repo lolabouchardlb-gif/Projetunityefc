@@ -1334,6 +1334,7 @@ MonoBehaviour:
   - miniJeuRelierInnus
   - miniJeuRelierMalecite
   - miniJeuRelierMigmaq
+  - MapScene
 --- !u!82 &1156365098
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1723,6 +1724,10 @@ PrefabInstance:
     - target: {fileID: 4709312759016661584, guid: 881d7e0edae62bb4dabc8a21c2c466d0, type: 3}
       propertyPath: m_Name
       value: BoucheTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709312759016661584, guid: 881d7e0edae62bb4dabc8a21c2c466d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

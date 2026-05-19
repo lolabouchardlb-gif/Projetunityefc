@@ -1,77 +1,129 @@
-using UnityEngine; 
+using UnityEngine;
 
-public class DropZone : MonoBehaviour 
+public class DropZone : MonoBehaviour
+
 {
-    //liste des objects valide dans la drop zone
-    [SerializeField] private string[] _validObjectIds; 
 
-    //object présent dans la zone
-    private DragAndDrop _currentObject; 
+    [SerializeField] private string[] _validObjectIds;
 
-    //fonction appeller quand un object rentre dans la drop zone
-    private void OnTriggerEnter2D(Collider2D collision) 
+    private DragAndDrop _currentObject;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+
     {
-        // On récupère le script DragAndDrop sur l'objet entrant.
-        DragAndDrop obj = collision.GetComponent<DragAndDrop>(); 
 
-        //si il a le script on enregistre l'object dans la drop zone
-        if (obj != null) 
-        {
-            Debug.Log("Entré : " + obj.name);
-            // On stocke l'objet présent dans la zone.
-            _currentObject = obj; 
-        }
-    }
-
-    //fonction appeller quand un object sort de la drop zone
-    private void OnTriggerExit2D(Collider2D collision) 
-    {
-        // On récupère le script DragAndDrop de l'objet sortant.
         DragAndDrop obj = collision.GetComponent<DragAndDrop>();
 
-        // Si l'objet sortant est celui enregistré.
-        
-        if (obj != null && obj == _currentObject) 
+        if (obj == null)
+
         {
-            Debug.Log("Sorti : " + obj.name); 
-            //on le supprime de la zone
-            _currentObject = null; 
+
+            return;
+
         }
+
+        if (obj.CurrentDropZone != null && obj.CurrentDropZone != this)
+
+        {
+
+            return;
+
+        }
+
+        if (_currentObject != null && _currentObject != obj)
+
+        {
+
+            return;
+
+        }
+
+        _currentObject = obj;
+
+        obj.CurrentDropZone = this;
+
+        Debug.Log("Entré : " + obj.name + " dans " + gameObject.name);
+
     }
 
-    //fonction appeller pour savoir si la drop zone a les bon objects
-    public bool IsCorrect() 
+    private void OnTriggerExit2D(Collider2D collision)
+
     {
-        //si la drop zone n'a pas d'object on retourne faux
-        if (_currentObject == null) 
+
+        DragAndDrop obj = collision.GetComponent<DragAndDrop>();
+
+        if (obj != null && obj == _currentObject)
+
         {
-            return false; 
-        } 
-        //on parcourt tout les objects autoriser de la drop zone
-        foreach (string id in _validObjectIds) // Vérifie chaque ID autorisé...
-        {
-            //si l'object a le bon ID on le valide
-            if (_currentObject.ObjectId == id) 
+
+            Debug.Log("Sorti : " + obj.name + " de " + gameObject.name);
+
+            _currentObject = null;
+
+            if (obj.CurrentDropZone == this)
+
             {
-                return true; 
-            } 
-                
+
+                obj.CurrentDropZone = null;
+
+            }
+
         }
-        //sinon on ne valide pas l'object
-        return false; 
+
     }
 
-    //fonction pour savoir si la drop zone a un object
-    public bool IsFilled() 
+    public bool IsCorrect()
+
     {
-        // Retourne True si on a une référence d'objet.
-        return _currentObject != null; 
+
+        if (_currentObject == null)
+
+        {
+
+            return false;
+
+        }
+
+        foreach (string id in _validObjectIds)
+
+        {
+
+            if (_currentObject.ObjectId == id)
+
+            {
+
+                return true;
+
+            }
+
+        }
+
+        return false;
+
     }
 
-    // Fonction qui reset la drop zone.
-    public void ResetMiniGame() 
+    public bool IsFilled()
+
     {
-        // On vide la zone.
-        _currentObject = null; 
+
+        return _currentObject != null;
+
     }
+
+    public void ResetMiniGame()
+
+    {
+
+        if (_currentObject != null && _currentObject.CurrentDropZone == this)
+
+        {
+
+            _currentObject.CurrentDropZone = null;
+
+        }
+
+        _currentObject = null;
+
+    }
+
 }
