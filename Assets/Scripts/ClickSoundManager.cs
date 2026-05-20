@@ -44,7 +44,10 @@ public class ClickSoundManager : MonoBehaviour
 
     private void AddSoundsToButtons()
     {
-        Button[] allButtons = FindObjectsOfType<Button>(true);
+        Button[] allButtons;
+
+
+        allButtons = Object.FindObjectsByType<Button>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
         foreach (Button btn in allButtons)
         {

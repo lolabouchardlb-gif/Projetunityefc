@@ -70,12 +70,4 @@ public class DragAndDrop : MonoBehaviour
             _offset = transform.position - pos;
         }
     }
-    public void ResetMiniGame()
-    {
-        _isDragging = false;
-        _offset = Vector3.zero;
-        CurrentDropZone = null;
-        transform.position = _startPosition;
-        enabled = true;
-    }
 }

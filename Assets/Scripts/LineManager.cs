@@ -84,8 +84,7 @@ public class LineManager : MonoBehaviour
         }
         foreach (var pair in _connections)
         {
-            if ((pair.Item1 == a && pair.Item2 == b) ||
-                (pair.Item1 == b && pair.Item2 == a))
+            if ((pair.Item1 == a && pair.Item2 == b) || (pair.Item1 == b && pair.Item2 == a))
             {
                 Debug.Log("Connexion déjà faite");
                 return;
@@ -133,24 +132,5 @@ public class LineManager : MonoBehaviour
     public void SetInteraction(bool state)
     {
         _canInteract = state;
-    }
-    public void ResetConnections()
-    {
-        if (_currentLine != null)
-        {
-            Destroy(_currentLine.gameObject);
-            _currentLine = null;
-        }
-        _startNode = null;
-        foreach (Transform child in transform)
-        {
-            Destroy(child.gameObject);
-        }
-        _connections.Clear();
-    }
-    public void ResetMiniGame()
-    {
-        _canInteract = true;
-        ResetConnections();
     }
 }

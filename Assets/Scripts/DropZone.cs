@@ -110,20 +110,4 @@ public class DropZone : MonoBehaviour
 
     }
 
-    public void ResetMiniGame()
-
-    {
-
-        if (_currentObject != null && _currentObject.CurrentDropZone == this)
-
-        {
-
-            _currentObject.CurrentDropZone = null;
-
-        }
-
-        _currentObject = null;
-
-    }
-
 }

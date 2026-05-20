@@ -106,23 +106,4 @@ public class LinkGameManager : MonoBehaviour
         // On cache le bouton pour valider valider.
         _validateButton.SetActive(false); 
     }
-
-    // Fonction pour reset le mini jeu.
-    public void ResetMiniGame() 
-    {
-        // On cache le fond du texte de résultat.
-        _backgroundTxtResult.SetActive(false);
-        // On cache le texte des résultats.
-        _resultText.gameObject.SetActive(false);
-        // On cache le bouton de retry.
-        _retryButton.SetActive(false);
-        // On cache le bouton de félicitation.
-        _returnMiniGameChoiseButton.SetActive(false);
-        // On cache le bouton pour valider.
-        _validateButton.SetActive(false);
-        // On marque le jeu comme actif.
-        _gameStarted = true;
-        // On reset toutes les lignes/connexions.
-        _lineManager.ResetMiniGame(); 
-    }
 }

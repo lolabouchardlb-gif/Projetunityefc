@@ -147,32 +147,4 @@ public class GameManager : MonoBehaviour
         _canValidate = false; 
         _validateButton.SetActive(false); 
     }
-
-    // Fonction qui reset le mini-jeu .
-    public void ResetMiniGame() 
-    {
-        // Pour chaque dropZone
-        foreach (DropZone zone in _dropZones) 
-        {
-            // On efface l'objet courant.
-            zone.ResetMiniGame(); 
-        }
-
-        // Pour chaque objets déplaçables.
-        foreach (DragAndDrop obj in _draggableObjects) 
-        {
-            // On les remet a leurs position initial et on les réactive.
-            obj.ResetMiniGame(); 
-        }
-
-        _resultText.gameObject.SetActive(false); 
-        _returnMiniGameChoise.SetActive(false); 
-        _retryButton.SetActive(false); 
-        _backgroundText.SetActive(false);
-
-        _canValidate = false; 
-        _validateButton.SetActive(false); 
-
-        SetGameState(true); 
-    }
 }

@@ -235,19 +235,4 @@ public class QuizGameManager : MonoBehaviour
         //on affiche le bouton pour retouner aux vhoix des minis jeux
         _returnMiniGameChoiseButton.SetActive(true); 
     }
-
-    // Fonction pour reset le mini jeu.
-    public void ResetMiniGame() 
-    {
-        // On revient à la première question.
-        _currentQuestion = 0;
-        // Aucune réponse sélectionnée.
-        _selectedAnswer = -1;
-        // Cache le bouton de félicitation.
-        _returnMiniGameChoiseButton.SetActive(false);
-        // On réactive l'UI du quiz.
-        SetGameState(true);
-        // On réaffiche la première question.
-        DisplayQuestion(); 
-    }
 }
